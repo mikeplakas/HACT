@@ -1,0 +1,59 @@
+﻿@page "{id:int}"
+@model HACT.Pages.NewsDetailModel
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+    // ViewData["Title"] = "New Details";
+}
+
+@if (Model.New != null)
+{
+    <section class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card shadow rounded p-4">
+                    <h2 class="text-center text-primary mb-4">@Model.New.Title</h2>
+
+                <div class="d-flex justify-content-center mb-4">
+                    <div class="position-relative overflow-hidden rounded shadow-sm" style="width: 100%; max-width: 800px; height: 400px;">
+                        <img class="w-100 h-100 object-fit-cover" src="@Model.New.ImageUrl" alt="@Model.New.Title">
+                    </div>
+                </div>
+
+
+                    <div class="mb-3">
+                        <span class="text-muted">
+                            🗓 @Model.New.DatePosted.ToString("dd MMM yyyy")
+                        </span>
+                    </div>
+
+                    <p style="white-space: pre-line;">@Model.New.Content</p>
+
+                    <div class="text-end mt-4">
+                        @if (!string.IsNullOrEmpty(Model.Category))
+                        {
+                            <a asp-page="/News"
+                               asp-route-category="@(ViewData["SelectedCategory"] as string)"
+                               class="btn btn-secondary">← Back to @(ViewData["SelectedCategory"])</a>
+                        }
+                        else
+                        {
+                            <a asp-page="/News" class="btn btn-secondary">← Back to News</a>
+                        }
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    <section class="container mt-5">
+        <div class="alert alert-danger text-center">
+            Το άρθρο δεν βρέθηκε.
+        </div>
+        <div class="text-center">
+            <a asp-page="/News" class="btn btn-outline-secondary">← Επιστροφή στα Άρθρα</a>
+        </div>
+    </section>
+}

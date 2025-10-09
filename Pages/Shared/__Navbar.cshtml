@@ -1,0 +1,105 @@
+﻿@inject IHttpContextAccessor HttpContextAccessor
+
+@{
+    var currentCshtmlName = ViewData["CshtmlName"]?.ToString() ?? string.Empty;
+    var selectedCategory = ViewData["SelectedCategory"]?.ToString();
+    var user = HttpContextAccessor.HttpContext?.User;
+    bool isAdmin = user?.Identity?.IsAuthenticated == true && user.IsInRole("Admin");
+}
+
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 py-3 py-lg-0 sticky-top">
+
+        <a asp-area="" asp-page="/Index" class="navbar-brand me-auto p-0 d-flex align-items-center">
+            <img src="~/logo.png" alt="Logo" style="height: 40px;">
+            <h1 class="m-0 d-inline align-middle ms-2">H.A.C.T</h1>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ms-auto py-0">
+                <li class="nav-item">
+                    <a asp-page="/Index" class="nav-link @(currentCshtmlName.Equals("") ? "active" : "")">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-page="/About" class="nav-link @(currentCshtmlName.Equals("About") ? "active" : "")">About</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-page="/Services" class="nav-link @(currentCshtmlName.Equals("Services") ? "active" : "")">Services</a>
+                </li>
+
+                @* News item: dropdown ΜΟΝΟ όταν είμαστε στη σελίδα News *@
+                @if (currentCshtmlName.Equals("News", StringComparison.OrdinalIgnoreCase))
+                {
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="newsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            News @(string.IsNullOrEmpty(selectedCategory) ? "" : $"— {selectedCategory}")
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="newsDropdown">
+                            <li>
+                                <a class="dropdown-item @(string.IsNullOrEmpty(selectedCategory) ? "active" : "")"
+                                   asp-page="/News">All</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item @(string.Equals(selectedCategory, "Articles", StringComparison.OrdinalIgnoreCase) ? "active" : "")"
+                                   asp-page="/News" asp-route-category="Articles">Articles</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item @(string.Equals(selectedCategory, "Events", StringComparison.OrdinalIgnoreCase) ? "active" : "")"
+                                   asp-page="/News" asp-route-category="Events">Events</a>
+                            </li>
+                        </ul>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a asp-page="/News" class="nav-link @(currentCshtmlName.Equals("News") ? "active" : "")">News</a>
+                    </li>
+                }
+
+                <li class="nav-item">
+                    <a asp-page="/Contact" class="nav-link @(currentCshtmlName.Equals("Contact") ? "active" : "")">Contact</a>
+                </li>
+
+                @if (isAdmin)
+                {
+                    <li class="nav-item">
+                        <a asp-page="/Admin/AddNew" class="nav-link @(currentCshtmlName == "AddNew" ? "active" : "")">➕ Add New</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-page="/Admin/ContactMessages"
+                           class="nav-link @(currentCshtmlName == "ContactMessages" ? "active" : "")">
+                            📩 Admin Messages
+                            @if (ViewData["UnreadCount"] is int unread && unread > 0)
+                            {
+                                <span class="badge bg-danger">@unread</span>
+                            }
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <form method="post" asp-page="/Admin/Logout" class="d-inline">
+                            <button type="submit" class="btn nav-link text-danger px-2" title="Logout">
+                                <i class="fas fa-sign-out-alt"></i>
+                            </button>
+                        </form>
+                    </li>
+
+                }
+            </ul>
+        </div>
+    </nav>
+
+    @if (string.IsNullOrEmpty(currentCshtmlName))
+    {
+        @await Html.PartialAsync("__Hero")
+    }
+    else
+    {
+        @await Html.PartialAsync("__Header")
+    }
+</div>

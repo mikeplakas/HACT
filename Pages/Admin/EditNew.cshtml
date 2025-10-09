@@ -1,0 +1,55 @@
+﻿@page "{id:int}"
+@model HACT.Pages.Admin.EditNewModel
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Edit New";
+    // ViewData["CshtmlName"] = "EditNew";
+}
+
+<section class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow rounded p-4">
+                <h2 class="text-center text-primary mb-4">✏️ Edit New</h2>
+
+                <form method="post" enctype="multipart/form-data">
+                    <input type="hidden" asp-for="New.Id" />
+
+                    <div class="mb-3">
+                        <label asp-for="New.Title" class="form-label">Title</label>
+                        <input asp-for="New.Title" class="form-control" placeholder="Enter title" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Current Image</label><br />
+                        <img src="@Model.New.ImageUrl" alt="Current Image" class="img-thumbnail mb-2" style="max-width: 200px;" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Change Image</label>
+                        <input type="file" name="UploadedImage" class="form-control" accept="image/*" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="New.Category" class="form-label">Category</label>
+                        <select asp-for="New.Category" class="form-select" required>
+                            <option value="">-- Select Category --</option>
+                            <option value="Articles" selected="@(Model.New.Category == "Articles")">Articles</option>
+                            <option value="Events" selected="@(Model.New.Category == "Events")">Events</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="New.Content" class="form-label">Content</label>
+                        <textarea asp-for="New.Content" class="form-control" rows="6" placeholder="Write the New content..." required></textarea>
+                    </div>
+
+                    <div class="text-end">
+                        <button type="submit" class="btn btn-success me-2">💾 Save Changes</button>
+                        <a asp-page="/News" class="btn btn-outline-secondary">↩ Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,63 @@
+﻿@page
+@model HACT.Pages.Admin.ContactMessagesModel
+@{
+    ViewData["Title"] = "Contact Messages";
+    ViewData["CshtmlName"] = "ContactMessages";
+}
+
+<div class="container mt-5">
+    <div class="card shadow border-0">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h3 class="mb-0">📩 Contact Messages</h3>
+            <span class="badge bg-light text-dark">
+                @Model.Messages.Count message(s)
+            </span>
+        </div>
+        <div class="card-body">
+            @if (Model.Messages.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered align-middle">
+                        <thead class="table-light text-center">
+                            <tr>
+                                <th style="width: 12%;">Name</th>
+                                <th style="width: 18%;">Email</th>
+                                <th style="width: 15%;">Subject</th>
+                                <th style="width: 40%;">Message</th>
+                                <th style="width: 15%;">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var msg in Model.Messages.OrderByDescending(m => m.CreationDate))
+                            {
+                                <tr>
+                                    <td class="fw-bold text-nowrap">@msg.Name</td>
+                                    <td class="text-truncate">
+                                        <a href="mailto:@msg.Email" class="text-decoration-none">
+                                            <i class="fas fa-envelope me-1"></i>@msg.Email
+                                        </a>
+                                    </td>
+                                    <td class="text-center">
+                                        <span class="badge bg-info text-dark px-2 py-1">@msg.Subject</span>
+                                    </td>
+                                    <td style="white-space: pre-wrap; word-break: break-word; max-width: 500px;">
+                                        @msg.Message
+                                    </td>
+                                    <td class="text-muted small text-end">
+                                        @msg.CreationDate.ToString("g")
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-info mb-0">
+                    No contact messages found.
+                </div>
+            }
+        </div>
+    </div>
+</div>

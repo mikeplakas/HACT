@@ -1,0 +1,34 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using HACT.Data
+@using HACT.Models
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<ul class="navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-page="/Index">Hello, @User.Identity?.Name!</a>
+        </li>
+        @if (User.IsInRole("Admin"))
+        {
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-page="/Admin/ContactMessages">📩 Admin Messages</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-dark" asp-page="/Admin/AddNew">➕ Add New</a>
+            </li>
+        }
+        <li class="nav-item">
+            <form method="post" asp-page="/Account/Logout" class="form-inline">
+                <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+            </form>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-page="/Account/Login">Login</a>
+        </li>
+    }
+</ul>

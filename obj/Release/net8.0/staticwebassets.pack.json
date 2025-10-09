@@ -1,0 +1,529 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\obj\\Release\\net8.0\\scopedcss\\projectbundle\\HACT.bundle.scp.css",
+      "PackagePath": "staticwebassets\\HACT.y0471dkjvs.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landing-page.png",
+      "PackagePath": "staticwebassets\\landing-page.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\landingpage\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\css\\style.css",
+      "PackagePath": "staticwebassets\\landingpage\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\Carousel1.png",
+      "PackagePath": "staticwebassets\\landingpage\\img\\Carousel1.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\about.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\about.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\blog-1.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\blog-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\blog-2.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\blog-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\blog-3.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\blog-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\carousel-1.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\carousel-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\carousel-2.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\carousel-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\feature.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\feature.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\services.png",
+      "PackagePath": "staticwebassets\\landingpage\\img\\services.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\team-1.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\team-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\team-2.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\team-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\team-3.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\team-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\testimonial-1.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\testimonial-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\testimonial-2.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\testimonial-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\testimonial-3.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\testimonial-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\testimonial-4.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\testimonial-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\user.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\user.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\vendor-1.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\vendor-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\vendor-2.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\vendor-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\vendor-3.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\vendor-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\vendor-4.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\vendor-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\vendor-5.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\vendor-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\vendor-6.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\vendor-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\vendor-7.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\vendor-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\vendor-8.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\vendor-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\img\\vendor-9.jpg",
+      "PackagePath": "staticwebassets\\landingpage\\img\\vendor-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\js\\main.js",
+      "PackagePath": "staticwebassets\\landingpage\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\animate\\animate.css",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\animate\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\animate\\animate.min.css",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\animate\\animate.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\counterup\\counterup.min.js",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\counterup\\counterup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\easing\\easing.js",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\easing\\easing.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\easing\\easing.min.js",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\easing\\easing.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\owlcarousel\\LICENSE",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\owlcarousel"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\owlcarousel\\assets\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\owlcarousel\\assets\\owl.carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\owlcarousel\\assets\\owl.theme.default.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\owlcarousel\\assets\\owl.theme.green.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\owlcarousel\\assets\\owl.video.play.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\owlcarousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\owlcarousel\\owl.carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\owlcarousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\owlcarousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\waypoints\\links.php",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\waypoints\\links.php"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\waypoints\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\waypoints\\waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\wow\\wow.js",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\wow\\wow.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\landingpage\\lib\\wow\\wow.min.js",
+      "PackagePath": "staticwebassets\\landingpage\\lib\\wow\\wow.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\logo.png",
+      "PackagePath": "staticwebassets\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\uploads\\ellada-us-flag660-991457f1-684d-48fa-8916-3b54b90657a8.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ellada-us-flag660-991457f1-684d-48fa-8916-3b54b90657a8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\uploads\\greece-santorini-blue-roof-churches-and-mediterranean-29e77fc9-8c72-4b0f-92ed-a45e32a9cc21.jpg",
+      "PackagePath": "staticwebassets\\uploads\\greece-santorini-blue-roof-churches-and-mediterranean-29e77fc9-8c72-4b0f-92ed-a45e32a9cc21.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\uploads\\greek-islands-3cab3fbd-5fa3-4996-b5da-0ebc57a82f15.jpg",
+      "PackagePath": "staticwebassets\\uploads\\greek-islands-3cab3fbd-5fa3-4996-b5da-0ebc57a82f15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\uploads\\greek-islands-90ce4fab-ed7b-46ca-9662-e669b54bc43f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\greek-islands-90ce4fab-ed7b-46ca-9662-e669b54bc43f.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\uploads\\usa-a7a13c55-ccbe-4353-ae95-0569f6a8d892.jpg",
+      "PackagePath": "staticwebassets\\uploads\\usa-a7a13c55-ccbe-4353-ae95-0569f6a8d892.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\uploads\\usa-cfc83a23-7e80-415b-afcd-2948ad418475.jpg",
+      "PackagePath": "staticwebassets\\uploads\\usa-cfc83a23-7e80-415b-afcd-2948ad418475.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\uploads\\usa-greece-credit-gr-illustration-44b90063-94d8-4a80-b4d3-9213836c8dc4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\usa-greece-credit-gr-illustration-44b90063-94d8-4a80-b4d3-9213836c8dc4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\uploads\\Στιγμιότυπο οθόνης 2025-06-24 145330-9b3b5a65-1b84-4bb6-b098-20698a34b853.png",
+      "PackagePath": "staticwebassets\\uploads\\Στιγμιότυπο οθόνης 2025-06-24 145330-9b3b5a65-1b84-4bb6-b098-20698a34b853.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\uploads\\Στιγμιότυπο οθόνης 2025-06-24 150518-51e0d408-0a1c-4dde-b8f2-400112012399.png",
+      "PackagePath": "staticwebassets\\uploads\\Στιγμιότυπο οθόνης 2025-06-24 150518-51e0d408-0a1c-4dde-b8f2-400112012399.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\uploads\\Στιγμιότυπο οθόνης 2025-06-24 151307-61d1aab4-f1e0-40ff-94e0-76c094a2a7a2.png",
+      "PackagePath": "staticwebassets\\uploads\\Στιγμιότυπο οθόνης 2025-06-24 151307-61d1aab4-f1e0-40ff-94e0-76c094a2a7a2.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\uploads\\Στιγμιότυπο οθόνης 2025-06-24 151703-101ba1e5-9dca-4645-a3a4-9ab4a5f06e1b.png",
+      "PackagePath": "staticwebassets\\uploads\\Στιγμιότυπο οθόνης 2025-06-24 151703-101ba1e5-9dca-4645-a3a4-9ab4a5f06e1b.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\uploads\\Στιγμιότυπο οθόνης 2025-06-24 152247-bfd6d17c-5afe-4a5c-9951-54c10cea0557.png",
+      "PackagePath": "staticwebassets\\uploads\\Στιγμιότυπο οθόνης 2025-06-24 152247-bfd6d17c-5afe-4a5c-9951-54c10cea0557.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\uploads\\Στιγμιότυπο οθόνης 2025-07-14 233307-5dc1837e-fa13-417b-b3f4-57576cd3f707.png",
+      "PackagePath": "staticwebassets\\uploads\\Στιγμιότυπο οθόνης 2025-07-14 233307-5dc1837e-fa13-417b-b3f4-57576cd3f707.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\uploads\\Στιγμιότυπο οθόνης 2025-07-14 233307-a12c2f9a-14f4-46dd-b26b-68eb7c0ccc31.png",
+      "PackagePath": "staticwebassets\\uploads\\Στιγμιότυπο οθόνης 2025-07-14 233307-a12c2f9a-14f4-46dd-b26b-68eb7c0ccc31.png"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.HACT.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.HACT.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.HACT.props",
+      "PackagePath": "build\\HACT.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.HACT.props",
+      "PackagePath": "buildMultiTargeting\\HACT.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.HACT.props",
+      "PackagePath": "buildTransitive\\HACT.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

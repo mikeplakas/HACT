@@ -1,0 +1,66 @@
+﻿@page
+@model HACT.Pages.Admin.AddNewModel
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Add New";
+    ViewData["CshtmlName"] = "AddNew";
+}
+
+<section class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow rounded p-4">
+                <h2 class="text-center text-primary mb-4">➕ Add New New</h2>
+
+                @if (Model.ShowSuccessMessage)
+                {
+                    <div class="alert alert-success">✅ The New was successfully added!</div>
+                }
+
+                <form method="post" enctype="multipart/form-data" asp-page=".">
+                    @Html.AntiForgeryToken()
+
+                    @if (!ViewData.ModelState.IsValid && ViewData.ModelState.ErrorCount > 0)
+                    {
+                        <div asp-validation-summary="All" class="alert alert-danger"></div>
+                    }
+                    <div class="mb-3">
+                        <label asp-for="New.Title" class="form-label"></label>
+                        <input asp-for="New.Title" class="form-control" placeholder="Enter title" required />
+                        <span asp-validation-for="New.Title" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="New.Category" class="form-label"></label>
+                        <select asp-for="New.Category" class="form-select" required>
+                            <option value="">-- Select Category --</option>
+                            <option value="Articles">Articles</option>
+                            <option value="Events">Events</option>
+                        </select>
+                        <span asp-validation-for="New.Category" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">New Image</label>
+                        <input type="file" name="UploadedImage" class="form-control" accept="image/*" />
+                        <span asp-validation-for="UploadedImage" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="New.Content" class="form-label"></label>
+                        <textarea asp-for="New.Content" id="New-content" class="form-control" rows="6" required></textarea>
+                        <span asp-validation-for="New.Content" class="text-danger"></span>
+                    </div>
+
+                    <div class="text-end">
+                        <button type="submit" class="btn btn-success">💾 Save New</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

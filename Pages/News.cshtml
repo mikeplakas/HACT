@@ -1,0 +1,14 @@
+﻿@page "News"
+@model HACT.Pages.NewsModel
+@{
+
+    ViewData["CshtmlName"] = "News";
+    ViewData["PageSubtitle"] = "Learn more about our chamber and mission.";
+
+    ViewData["Title"] = "News";
+
+}
+
+@await Html.PartialAsync("__News", Model.News)
+
+

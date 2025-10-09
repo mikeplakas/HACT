@@ -1,0 +1,74 @@
+﻿@model List<HACT.Models.New>
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    var user = HttpContextAccessor.HttpContext?.User;
+    bool isAdmin = user?.Identity?.IsAuthenticated == true && user.IsInRole("Admin");
+    var category = HttpContextAccessor.HttpContext?.Request.Query["category"].ToString();
+    var titleText = string.IsNullOrEmpty(category) ? "Latest News" : $"Latest {category}";
+}
+
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <div class="section-title position-relative pb-3 mb-0">
+                <h5 class="fw-bold text-primary text-uppercase">
+                    @(ViewData["SelectedCategory"] is null ? "Latest News" : $"Latest {(string)ViewData["SelectedCategory"]}")
+                </h5>
+                <h1 class="mb-0">
+                    @(ViewData["SelectedCategory"] is null ? "Read The Latest News" : $"Read The Latest {(string)ViewData["SelectedCategory"]}")
+                </h1>
+            </div>
+            @* Προαιρετικά: quick filter local (χωρίς navbar) *@
+            <form method="get" asp-page="/News" class="d-flex align-items-center">
+                <label class="me-2 mb-0">Category</label>
+                <select name="category" class="form-select" onchange="this.form.submit()">
+                    <option value="" selected="@(ViewData["SelectedCategory"] is null)">All</option>
+                    <option value="Articles" selected="@(string.Equals((string?)ViewData["SelectedCategory"], "Articles", StringComparison.OrdinalIgnoreCase))">Articles</option>
+                    <option value="Events" selected="@(string.Equals((string?)ViewData["SelectedCategory"], "Events", StringComparison.OrdinalIgnoreCase))">Events</option>
+                </select>
+                <noscript><button class="btn btn-primary ms-2" type="submit">Filter</button></noscript>
+            </form>
+        </div>
+
+        <div class="row g-5">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 d-flex align-items-stretch">
+                    <div class="blog-item rounded overflow-hidden d-flex flex-column w-100 shadow-sm custom-card">
+                        <div class="blog-img position-relative overflow-hidden" style="height: 200px;">
+                            <img class="img-fluid w-100 h-100 object-fit-cover" src="@item.ImageUrl" alt="@item.Title">
+                        </div>
+                        <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
+                            <div>
+                                <div class="d-flex mb-3 justify-content-between">
+                                    <small><i class="far fa-calendar-alt text-primary me-2"></i>@item.DatePosted.ToString("dd MMM, yyyy")</small>
+                                    <span class="badge bg-secondary">@item.Category</span>
+                                </div>
+                                <h5 class="mb-2 text-truncate">@item.Title</h5>
+                                <p style="min-height: 80px;">
+                                    @(item.Content?.Length > 100 ? item.Content.Substring(0, 100) + "..." : item.Content)
+                                </p>
+                            </div>
+                            <div class="mt-auto pt-2">
+                                @{
+                                    var selectedCategory = ViewData["SelectedCategory"] as string; // "Articles" / "Events" / null
+                                }
+                                <a class="btn btn-sm btn-outline-primary me-2"
+                                   asp-page="/NewsDetail"
+                                   asp-route-id="@item.Id"
+                                   asp-route-category="@(selectedCategory)">
+                                    🔍 Read More
+                                </a>
+                                @if (isAdmin)
+                                {
+                                    <a class="btn btn-sm btn-outline-secondary me-2" asp-page="/Admin/EditNew" asp-route-id="@item.Id">✏️ Edit</a>
+                                    <a class="btn btn-sm btn-outline-danger" asp-page="/Admin/DeleteNew" asp-route-id="@item.Id">🗑 Delete</a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
