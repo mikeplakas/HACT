@@ -2,42 +2,58 @@
 @model HACT.Pages.NewsDetailModel
 @{
     Layout = "~/Pages/Shared/_Layout.cshtml";
-    // ViewData["Title"] = "New Details";
 }
 
 @if (Model.New != null)
 {
-    <section class="container mt-5">
+    <section class="container py-5 wow fadeInUp" data-wow-delay="0.1s" style="background:#fff;">
         <div class="row justify-content-center">
             <div class="col-lg-10">
-                <div class="card shadow rounded p-4">
-                    <h2 class="text-center text-primary mb-4">@Model.New.Title</h2>
+                <div class="p-5 rounded-4 shadow-sm" style="background:#f0f2f5;">
 
-                <div class="d-flex justify-content-center mb-4">
-                    <div class="position-relative overflow-hidden rounded shadow-sm" style="width: 100%; max-width: 800px; height: 400px;">
-                        <img class="w-100 h-100 object-fit-cover" src="@Model.New.ImageUrl" alt="@Model.New.Title">
+                    <!-- Title -->
+                    <h2 class="text-center fw-bold mb-4" style="color:#0b2343;">@Model.New.Title</h2>
+
+                    <!-- Image -->
+                    <div class="d-flex justify-content-center mb-4">
+                        <div class="position-relative overflow-hidden rounded-4 shadow-sm"
+                             style="width:100%; max-width:800px; height:400px; background:#fff;">
+                            <img class="w-100 h-100 object-fit-cover"
+                                 src="@Model.New.ImageUrl"
+                                 alt="@Model.New.Title"
+                                 style="border-radius:12px;">
+                        </div>
                     </div>
-                </div>
 
-
-                    <div class="mb-3">
-                        <span class="text-muted">
+                    <!-- Date -->
+                    <div class="mb-3 text-center">
+                        <span class="text-muted small">
                             🗓 @Model.New.DatePosted.ToString("dd MMM yyyy")
+                            @if (!string.IsNullOrEmpty(Model.New.Category))
+                            {
+                                <span class="badge bg-secondary ms-2">@Model.New.Category</span>
+                            }
                         </span>
                     </div>
 
-                    <p style="white-space: pre-line;">@Model.New.Content</p>
+                    <!-- Content -->
+                    <div class="mt-4" style="color:#334155; line-height:1.7; white-space:pre-line;">
+                        @Html.Raw(Model.New.Content)
+                    </div>
 
-                    <div class="text-end mt-4">
+                    <!-- Back button -->
+                    <div class="text-end mt-5">
                         @if (!string.IsNullOrEmpty(Model.Category))
                         {
                             <a asp-page="/News"
                                asp-route-category="@(ViewData["SelectedCategory"] as string)"
-                               class="btn btn-secondary">← Back to @(ViewData["SelectedCategory"])</a>
+                               class="btn btn-outline-primary rounded-pill px-4">
+                                ← Back to @(ViewData["SelectedCategory"])
+                            </a>
                         }
                         else
                         {
-                            <a asp-page="/News" class="btn btn-secondary">← Back to News</a>
+                            <a asp-page="/News" class="btn btn-outline-primary rounded-pill px-4">← Back to News</a>
                         }
                     </div>
 
@@ -48,12 +64,12 @@
 }
 else
 {
-    <section class="container mt-5">
-        <div class="alert alert-danger text-center">
-            Το άρθρο δεν βρέθηκε.
+    <section class="container py-5">
+        <div class="alert alert-danger text-center shadow-sm rounded-4" style="max-width:700px; margin:auto;">
+            ❌ The requested article could not be found.
         </div>
-        <div class="text-center">
-            <a asp-page="/News" class="btn btn-outline-secondary">← Επιστροφή στα Άρθρα</a>
+        <div class="text-center mt-4">
+            <a asp-page="/News" class="btn btn-outline-primary rounded-pill px-4">← Back to News</a>
         </div>
     </section>
 }

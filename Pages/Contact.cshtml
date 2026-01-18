@@ -2,9 +2,117 @@
 @model HACT.Pages.ContactModel
 @{
     ViewData["CshtmlName"] = "Contact";
-    ViewData["PageSubtitle"] = "Learn more about our chamber and mission.";
 }
 
+<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" style="background:#fff;">
+    <div class="container py-5">
 
+        <!-- Title -->
+        <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+            <h1 class="fw-bold mb-0" style="color:#0b2343;"><br>Contact Us</h1>
+        </div>
 
-@await Html.PartialAsync("__Contact")
+        <!-- Contact Form -->
+        <div class="row g-5 justify-content-center">
+            <div class="col-lg-8">
+                <div class="p-5 rounded-4 shadow-sm" style="background:#f0f2f5;">
+                    <form id="contactForm" novalidate>
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger d-none" id="validationSummary"></div>
+
+                        <div class="row g-3">
+                            <!-- Name -->
+                            <div class="col-md-6">
+                                <input asp-for="Message.Name" class="form-control border-0 px-4 py-3" style="background:#fff;" placeholder="Your Name" />
+                                <span asp-validation-for="Message.Name" class="text-danger small"></span>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="col-md-6">
+                                <input asp-for="Message.Email" class="form-control border-0 px-4 py-3" style="background:#fff;" placeholder="Your Email" />
+                                <span asp-validation-for="Message.Email" class="text-danger small"></span>
+                            </div>
+
+                            <!-- Subject -->
+                            <div class="col-12">
+                                <input asp-for="Message.Subject" class="form-control border-0 px-4 py-3" style="background:#fff;" placeholder="Subject" />
+                                <span asp-validation-for="Message.Subject" class="text-danger small"></span>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="col-12">
+                                <textarea asp-for="Message.Message" class="form-control border-0 px-4 py-3" style="background:#fff;" rows="5" maxlength="5000" placeholder="Your Message"></textarea>
+                                <span asp-validation-for="Message.Message" class="text-danger small"></span>
+                            </div>
+
+                            <!-- Submit -->
+                            <div class="col-12">
+                                <button type="button" id="sendBtn" class="btn btn-primary w-100 py-3 fw-semibold">
+                                    ✉️ Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div id="contactMessage" class="mt-4 text-center d-none"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const btn = document.getElementById("sendBtn");
+            const form = $("#contactForm");
+            const msgBox = $("#contactMessage");
+            const validationSummary = $("#validationSummary");
+
+            btn.addEventListener("click", async function () {
+                if (!form.valid()) {
+                    msgBox.addClass("d-none");
+                    validationSummary.removeClass("d-none")
+                        .html("Please fix the highlighted fields.");
+                    return;
+                }
+
+                msgBox.removeClass().addClass("mt-3 text-center text-muted").text("⏳ Sending...");
+                validationSummary.addClass("d-none");
+
+                const data = Object.fromEntries(new FormData(form[0]).entries());
+                const cleanData = {};
+                for (const [key, value] of Object.entries(data)) {
+                    cleanData[key.replace(/^Message\./, "")] = value;
+                }
+
+                try {
+                    const res = await fetch(`/Contact?handler=Send`, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(cleanData)
+                    });
+
+                    const result = await res.json();
+
+                    if (result.success) {
+                        msgBox.removeClass().addClass("alert alert-success mt-3 text-center")
+                            .text("✅ Message sent successfully!");
+                        form[0].reset();
+                    } else if (result.errors) {
+                        msgBox.addClass("d-none");
+                        validationSummary.removeClass("d-none")
+                            .html(result.errors.map(e => `<div>• ${e}</div>`).join(""));
+                    } else {
+                        msgBox.removeClass().addClass("alert alert-danger mt-3 text-center")
+                            .text("❌ Failed to send. Please try again.");
+                    }
+                } catch {
+                    msgBox.removeClass().addClass("alert alert-danger mt-3 text-center")
+                        .text("❌ Network error. Please try again.");
+                }
+            });
+        });
+    </script>
+}

@@ -1,0 +1,49 @@
+﻿@page
+@{
+    ViewData["Title"] = "American Chambers of Commerce Worldwide";
+}
+
+<div class="container-fluid py-5">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold text-primary">American Chambers of Commerce Worldwide</h2>
+        <p class="text-muted">Explore the AmCham network across the globe</p>
+    </div>
+
+    <div id="globeContainer"
+         style="width: 100%; height: 600px; border-radius: 15px; overflow: hidden; background: #002B55;">
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://unpkg.com/three@0.157.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/globe.gl"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async function () {
+
+          const container = document.getElementById("globeContainer");
+          const globe = Globe()(container)
+            .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+            .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
+            .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
+            .showAtmosphere(true)
+            .atmosphereColor('#3a7bd5')
+            .atmosphereAltitude(0.25);
+
+          // ✅ Φόρτωσε δεδομένα από JSON (στο wwwroot/data/amchams.json)
+          const res = await fetch('/data/amchams.json');
+          const amchams = await res.json();
+
+          globe.labelsData(amchams)
+            .labelText('name')
+            .labelSize(1.4)
+            .labelColor(() => 'rgba(255,255,255,0.85)')
+            .pointColor(() => '#00aaff')
+            .pointAltitude(0.02)
+            .onLabelClick(d => window.open(d.website, '_blank'));
+
+          globe.controls().autoRotate = true;
+          globe.controls().autoRotateSpeed = 0.8;
+        });
+    </script>
+}

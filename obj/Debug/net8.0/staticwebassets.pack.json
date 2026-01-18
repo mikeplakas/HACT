@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\data\\amchams.json",
+      "PackagePath": "staticwebassets\\data\\amchams.json"
+    },
+    {
       "Id": "C:\\Users\\User\\Desktop\\HACTnew\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

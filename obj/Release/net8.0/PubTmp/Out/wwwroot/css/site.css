@@ -1,3 +1,11 @@
+﻿@font-face {
+    font-family: "swiper-icons";
+    src: url("https://unpkg.com/swiper@9/swiper-bundle.min.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 html {
   font-size: 14px;
 }
@@ -21,32 +29,32 @@ body {
   margin-bottom: 60px;
 }
 
-/* ���� �� links ����� �� dark navbar */
+/* Κάνε τα links ορατά σε dark navbar */
 /* Dark Navbar Links */
 .navbar.navbar-dark .navbar-nav .nav-link {
-    color: rgba(255,255,255,.85) !important;
+    color: rgb(0, 0, 0) !important;
 }
 
     .navbar.navbar-dark .navbar-nav .nav-link:hover,
     .navbar.navbar-dark .navbar-nav .nav-link:focus {
-        color: #fff !important;
+        color: #000 !important;
     }
 
     .navbar.navbar-dark .navbar-nav .nav-link.active,
     .navbar.navbar-dark .navbar-nav .show > .nav-link {
-        color: #fff !important;
+        color: #000 !important;
         font-weight: 600;
     }
 
 /* Navbar brand */
 .navbar-dark .navbar-brand {
-    color: #fff !important;
+    color: #000 !important;
 }
 
 /* Mobile collapse menu background */
 @media (max-width: 991.98px) {
     .navbar-dark .navbar-collapse {
-        background-color: #061429 !important;
+        background-color: white !important;
     }
 }
 
@@ -59,7 +67,7 @@ body {
     .dropdown-menu.dropdown-menu-dark .dropdown-item:active,
     .dropdown-menu.dropdown-menu-dark .dropdown-item.active {
         color: #fff !important;
-        background-color: rgba(255,255,255,.1) !important;
+        background-color: #073071 !important;
     }
 
 html {
@@ -74,40 +82,2645 @@ body {
 
     body > .container-fluid.bg-dark,
     body > .container-fluid.text-white {
-        margin-top: auto; /* �������� �� footer ��� ���� ����� */
+        margin-top: auto; /* σπρώχνει το footer στο κάτω μέρος */
     }
 
 
-/* ��� �� sections �� container-fluid + py-5 �� ����� ������� ����� */
+/* Όλα τα sections με container-fluid + py-5 να έχουν γαλάζιο φόντο */
 .container-fluid.py-5 {
-    background-color: #e6f4fa !important; /* ����� ������� */
+    background-color: white !important; /* απαλό γαλάζιο */
 }
 
 body {
-    background-color: #e6f4fa !important;
+    background-color: white !important;
       /* light blue */
 }
-/* �������� �� margin ���� ��� �� footer */
+/* Μηδένισε το margin πάνω από το footer */
 .container-fluid.bg-dark {
     margin-top: 0 !important;
 }
 
 .footer-spacer {
-    height: 40px; /* � ��� ��� */
-    background-color: #e6f4fa !important;
-     /* ���� �� �� sections */
+    height: 40px; /* ή όσο θες */
+    background-color: white !important;
+     /* ίδιο με τα sections */
 }
 .custom-card {
-    background-color: #f5faff; /* ����� ������� */
-    border: 1px solid #e0ebf5; /* ����� ���������� ��� �� ��������� */
+    background-color: #f5faff; /* απαλό γαλάζιο */
+    border: 1px solid #e0ebf5; /* λεπτό περίγραμμα για να ξεχωρίζει */
 }
 .blog-item p {
-    max-height: 60px; /* ��������� ���� �������� */
+    max-height: 60px; /* μικρότερο ύψος κειμένου */
     overflow: hidden;
 }
 
 .badge.bg-secondary {
-    background-color: rgb(140, 31, 31) !important; /* �.�. ���� */
-    color: #fff !important; /* ����� �������� */
+    background-color: rgb(140, 31, 31) !important; /* π.χ. μπλε */
+    color: #fff !important; /* λευκά γράμματα */
+}
+.custom-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+    .custom-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+.blog-img img {
+    transition: transform 0.4s ease;
+}
+
+.blog-item:hover .blog-img img {
+    transform: scale(1.05);
+}
+
+.card-custom {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+    .card-custom:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .card-custom img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+.card-body-custom {
+    padding: 1.25rem;
+}
+
+.btn-more {
+    font-weight: 500;
+    text-decoration: underline;
+    color: #0d6efd;
+    transition: color 0.2s ease;
+}
+
+    .btn-more:hover {
+        color: #0a58ca;
+    }
+
+.card-custom {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+    .card-custom:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .card-custom img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+.card-body-custom {
+    padding: 1.25rem;
+}
+
+.btn-more {
+    font-weight: 500;
+    text-decoration: underline;
+    color: #0d6efd;
+    transition: color 0.2s ease;
+}
+
+    .btn-more:hover {
+        color: #0a58ca;
+    }
+
+/* Swiper custom look */
+.swiper-pagination-bullet {
+    background-color: #cbd5e1;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #f59e0b;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #1e3a8a;
+    font-weight: bold;
+}
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        color: #0d6efd;
+    }
+
+.swiper-pagination {
+    position: static;
+    margin-top: 1rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #0d6efd;
+    transition: color 0.2s ease;
+}
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        color: #0a58ca;
+    }
+
+.swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #0d6efd;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    transition: all 0.3s ease;
+}
+/* ====== Swiper Layout Fix ====== */
+.swiper {
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px; /* δίνει χώρο για τις τελείες */
+    overflow: visible !important;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: stretch; /* οι κάρτες ίδιου ύψους */
+}
+
+.swiper-slide {
+    height: auto !important;
+    display: flex;
+    justify-content: center;
+}
+
+/* Βελτιώνει τη θέση των arrows */
+.swiper-button-prev,
+.swiper-button-next {
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+
+/* ======= SWIPER DESKTOP FIX ======= */
+.swiper {
+    width: 100% !important;
+    overflow: visible !important;
+}
+
+.swiper-wrapper {
+    display: flex !important;
+    align-items: stretch;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    width: auto !important;
+    height: auto !important;
+    display: flex;
+    justify-content: center;
+}
+
+    /* Κάρτες μέσα στο slider */
+    .swiper-slide .card {
+        width: 100%;
+        max-width: 360px; /* για να μην ξεχειλώνουν σε wide οθόνες */
+    }
+
+/* Βελτίωση των arrows για desktop */
+.swiper-button-prev,
+.swiper-button-next {
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+@media (min-width: 992px) {
+    .swiper {
+        padding: 0 40px; /* αφήνει χώρο για τα arrows */
+    }
+}
+.swiper {
+    overflow: visible !important;
+    padding: 0 40px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+/* --- SWIPER FULL VISIBILITY FIX --- */
+.swiper {
+    position: relative;
+    width: 100% !important;
+    overflow: visible !important;
+    height: auto !important;
+    min-height: 250px; /* για να φαίνεται σίγουρα */
+    padding-bottom: 40px;
+}
+
+.swiper-wrapper {
+    display: flex !important;
+    height: auto !important;
+    align-items: stretch !important;
+}
+
+.swiper-slide {
+    display: flex !important;
+    flex: 0 0 auto !important;
+    width: 33.333% !important; /* 3 cards ανά view σε desktop */
+    justify-content: center;
+    align-items: stretch;
+}
+
+@media (max-width: 991.98px) {
+    .swiper-slide {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .swiper-slide {
+        width: 100% !important;
+    }
+}
+/* ========== FIXED SWIPER CONFIGURATION ========== */
+.swiper {
+    position: relative;
+    width: 100%;
+    overflow: visible !important;
+    min-height: 250px;
+    padding: 0 40px 40px 40px;
+}
+
+.swiper-wrapper {
+    display: flex !important;
+    align-items: stretch !important;
+    height: auto !important;
+}
+
+.swiper-slide {
+    flex: 0 0 auto !important;
+    width: 33.333% !important; /* 3 slides ανά view */
+    display: flex !important;
+    justify-content: center;
+    align-items: stretch;
+}
+
+    .swiper-slide .card {
+        width: 100%;
+        max-width: 360px;
+    }
+
+@media (max-width: 991.98px) {
+    .swiper-slide {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .swiper-slide {
+        width: 100% !important;
+    }
+}
+
+/* arrows */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #0d6efd;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: color 0.2s ease;
+}
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        color: #0a58ca;
+    }
+
+/* pagination */
+.swiper-pagination {
+    position: relative !important;
+    bottom: 0 !important;
+    margin-top: 1rem;
+}
+
+.swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #0d6efd;
+}
+/* === SWIPER DESKTOP FINAL FIX === */
+.swiper {
+    width: 100% !important;
+    overflow: visible !important;
+    padding-bottom: 3rem;
+    position: relative;
+}
+
+.swiper-wrapper {
+    display: flex !important;
+    height: auto !important;
+}
+
+.swiper-slide {
+    flex: 0 0 auto !important;
+    width: 33.333% !important; /* 3 slides σε desktop */
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+    .swiper-slide .card {
+        width: 100%;
+        max-width: 370px;
+    }
+
+/* arrows πάντα ορατά */
+.swiper-button-prev,
+.swiper-button-next {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 10;
+    color: #0d6efd;
+}
+
+/* pagination πάντα ορατό */
+.swiper-pagination {
+    position: relative !important;
+    bottom: 0 !important;
+    margin-top: 1rem;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* για να μην "κλειδώνουν" */
+.swiper-pagination-lock,
+.swiper-button-lock {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+/* === FINAL SWIPER FIX FOR DESKTOP & MOBILE === */
+.swiper {
+    width: 100%;
+    position: relative;
+    overflow: visible !important;
+    padding-bottom: 3rem;
+}
+
+/* wrapper και slides */
+.swiper-wrapper {
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+.swiper-slide {
+    flex: 0 0 auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+    .swiper-slide .card {
+        width: 100%;
+        max-width: 370px;
+    }
+
+/* breakpoints */
+@media (min-width: 992px) {
+    #articlesSwiper .swiper-slide {
+        width: 33.333% !important;
+    }
+    /* 3 articles */
+    #eventsSwiper .swiper-slide {
+        width: 50% !important;
+    }
+    /* 2 events */
+}
+
+@media (max-width: 991.98px) {
+    .swiper-slide {
+        width: 100% !important;
+    }
+    /* 1 σε κινητό */
+}
+
+/* arrows εκτός slider, στο πλάι */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #0d6efd;
+    position: absolute;
+    top: 40%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        color: white;
+        background: #0d6efd;
+    }
+
+/* θέση έξω από τις κάρτες */
+.swiper-button-prev {
+    left: -25px;
+}
+
+.swiper-button-next {
+    right: -25px;
+}
+
+/* pagination */
+.swiper-pagination {
+    position: relative !important;
+    margin-top: 1.5rem;
+}
+
+.swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #0d6efd;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    color: #0d6efd;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+.swiper-pagination {
+    margin-top: 20px;
+    position: static;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    top: 45%;
+    transform: translateY(-50%);
+    color: #0d6efd;
+    background: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+.swiper-pagination {
+    margin-top: 20px;
+    position: static;
+}
+/* ===== SWIPER – CLEAN DESKTOP BEHAVIOR ===== */
+#articlesSwiper .swiper-slide,
+#eventsSwiper .swiper-slide {
+    width: auto !important;
+}
+/* ακύρωση των 33% / 50% */
+.swiper {
+    position: relative;
+    overflow: hidden !important; /* Κόβει τα επιπλέον slides – μένουν 3 ορατά */
+    padding-bottom: 1.25rem;
+}
+
+.swiper-wrapper {
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+.swiper-slide {
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+/* Απλά βελάκια, χωρίς κύκλους, μέσα στα άκρα */
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #0d6efd;
+    opacity: 0.9;
+    font-size: 22px;
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    left: 8px;
+}
+
+.swiper-button-next {
+    right: 8px;
+}
+
+    .swiper-button-prev:hover, .swiper-button-next:hover {
+        opacity: 1;
+        color: #0a58ca;
+    }
+
+/* Κουκίδες κάτω από το slider */
+.swiper-pagination {
+    position: static !important;
+    margin-top: .75rem;
+}
+
+.swiper-pagination-bullet {
+    background: #cbd5e1;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #0d6efd;
+}
+/* ===== SWIPER FINAL FIX ===== */
+.swiper {
+    position: relative;
+    overflow: hidden !important; /* κόβει τα extra slides */
+    padding-bottom: 2.5rem;
+}
+
+.swiper-wrapper {
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+.swiper-slide {
+    flex-shrink: 0;
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+/* 3 slides visible per view στο desktop, 1 στο κινητό */
+@media (min-width: 992px) {
+    #articlesSwiper .swiper-slide {
+        width: 33.3333% !important;
+    }
+
+    #eventsSwiper .swiper-slide {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .swiper-slide {
+        width: 100% !important;
+    }
+}
+
+/* Navigation arrows */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #0d6efd;
+    opacity: 0.8;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        opacity: 1;
+        color: #0a58ca;
+    }
+
+/* Pagination dots */
+.swiper-pagination {
+    position: static !important;
+    margin-top: 1rem;
+}
+
+.swiper-pagination-bullet {
+    background-color: #cbd5e1;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #0d6efd;
+}
+/* ===== SWIPER FIXED STYLES ===== */
+.swiper {
+    overflow: hidden !important;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.swiper-wrapper {
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Navigation arrows */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #0d6efd;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 10;
+    opacity: 0.8;
+}
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        opacity: 1;
+        color: #0a58ca;
+    }
+
+/* Pagination dots */
+.swiper-pagination {
+    position: static !important;
+    margin-top: 1rem;
+}
+
+.swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #0d6efd;
+}
+/* === Swiper Mobile Fix === */
+.swiper {
+    overflow: hidden !important;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.swiper-wrapper {
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex: 0 0 100%; /* ? mobile: ακριβώς 1 slide τη φορά */
+    box-sizing: border-box;
+}
+
+@media (min-width: 992px) {
+    #articlesSwiper .swiper-slide {
+        flex: 0 0 calc(100% / 3); /* 3 slides στο desktop */
+    }
+
+    #eventsSwiper .swiper-slide {
+        flex: 0 0 calc(100% / 2); /* 2 slides στο desktop */
+    }
+}
+
+/* === arrows & dots === */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #0d6efd;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 10;
+    opacity: 0.8;
+    background: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        opacity: 1;
+        color: #0a58ca;
+    }
+
+.swiper-pagination {
+    position: static !important;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #0d6efd;
+}
+/* === SWIPER – MOBILE ONE-PER-VIEW, STOP PEEKING === */
+
+/* Κόβει οτιδήποτε περισσεύει οριζόντια */
+#articlesSwiper, #eventsSwiper {
+    overflow: hidden !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+    /* Mobile: 1 slide = 100% */
+    #articlesSwiper .swiper-slide,
+    #eventsSwiper .swiper-slide {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        box-sizing: border-box;
+        display: flex !important;
+        align-items: stretch !important;
+    }
+
+        /* Η κάρτα να γεμίζει ΟΛΟ το slide (μην αφήνει κενά) */
+        #articlesSwiper .swiper-slide .card,
+        #eventsSwiper .swiper-slide .card {
+            width: 100% !important;
+            max-width: none !important;
+        }
+
+/* Desktop: 3 άρθρα – 2 events */
+@media (min-width: 992px) {
+    #articlesSwiper .swiper-slide {
+        flex: 0 0 calc(100% / 3) !important;
+    }
+
+    #eventsSwiper .swiper-slide {
+        flex: 0 0 50% !important;
+    }
+}
+
+/* Dots & arrows (προαιρετικά, καθαρά) */
+.swiper-pagination {
+    position: static !important;
+    margin-top: 0.75rem;
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    background: #cbd5e1;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #0d6efd;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 10;
+    color: #0d6efd;
+    opacity: .9;
+}
+
+    .swiper-button-prev:hover, .swiper-button-next:hover {
+        color: #0a58ca;
+        opacity: 1;
+    }
+
+/* === CLEAN SWIPER STYLING === */
+
+/* Wrapper */
+#articlesSwiper,
+#eventsSwiper {
+    position: relative;
+    overflow: hidden !important;
+    padding: 0 48px; /* αφήνει χώρο για τα βελάκια */
+}
+
+    /* Slides – mobile 1, desktop 3/2 */
+    #articlesSwiper .swiper-slide,
+    #eventsSwiper .swiper-slide {
+        flex: 0 0 100%;
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        box-sizing: border-box;
+    }
+
+@media (min-width: 992px) {
+    #articlesSwiper .swiper-slide {
+        flex: 0 0 calc(100% / 3);
+    }
+
+    #eventsSwiper .swiper-slide {
+        flex: 0 0 50%;
+    }
+}
+
+/* Κάρτες */
+#articlesSwiper .swiper-slide .card,
+#eventsSwiper .swiper-slide .card {
+    width: 100%;
+    max-width: 360px;
+}
+
+/* Pagination */
+.swiper-pagination {
+    position: static !important;
+    margin-top: 0.75rem;
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    background: #cbd5e1;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background: #0d6efd;
+}
+
+/* === ARROWS έξω από τα cards === */
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    color: #0d6efd;
+    font-size: 28px;
+    font-weight: bold;
+    z-index: 15;
+    opacity: 0.9;
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    width: auto;
+    height: auto;
+    transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+/* Πλάγιες θέσεις */
+.swiper-button-prev {
+    left: -36px;
+}
+
+.swiper-button-next {
+    right: -36px;
+}
+
+    /* Hover */
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        color: #0a58ca;
+        opacity: 1;
+    }
+
+/* Mobile: φέρτα λίγο μέσα */
+@media (max-width: 767.98px) {
+    #articlesSwiper,
+    #eventsSwiper {
+        padding: 0 20px;
+    }
+
+    .swiper-button-prev {
+        left: 6px;
+    }
+
+    .swiper-button-next {
+        right: 6px;
+    }
+}
+/* === ARROWS εκτός cards (πάντα ορατά) === */
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    color: #0d6efd;
+    font-size: 28px;
+    font-weight: bold;
+    z-index: 20; /* πάνω απ’ όλα */
+    opacity: 0.9;
+    background: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    width: auto;
+    height: auto;
+    transition: color 0.25s ease, opacity 0.25s ease;
+    pointer-events: auto;
+}
+
+/* Βελάκια ελαφρώς εκτός slider (όχι να κόβονται) */
+#articlesSwiper .swiper-button-prev,
+#eventsSwiper .swiper-button-prev {
+    left: 2px;
+}
+
+#articlesSwiper .swiper-button-next,
+#eventsSwiper .swiper-button-next {
+    right: 2px;
+}
+
+/* Hover effect */
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    color: #0a58ca;
+    opacity: 1;
+}
+
+/* Mobile – φέρτα λίγο μέσα */
+@media (max-width: 767.98px) {
+    #articlesSwiper .swiper-button-prev,
+    #eventsSwiper .swiper-button-prev {
+        left: 10px;
+    }
+
+    #articlesSwiper .swiper-button-next,
+    #eventsSwiper .swiper-button-next {
+        right: 10px;
+    }
+}
+.swiper-button-prev,
+.swiper-button-next {
+    z-index: 9999 !important;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-family: "swiper-icons" !important;
+        font-size: 28px;
+        color: #0d6efd;
+    }
+/* === SWIPER ARROWS VISIBILITY FIX === */
+.nav-outside {
+    position: relative;
+    overflow: visible !important; /* επιτρέπει τα βελάκια να εξέχουν */
+}
+
+    .nav-outside .swiper {
+        overflow: visible !important; /* αφήνει τα arrows να φαίνονται */
+    }
+
+    /* τα ίδια τα βελάκια */
+    .nav-outside .nav-arrow {
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        color: #0d6efd;
+        background: none;
+        border: none;
+        z-index: 9999 !important;
+        font-size: 28px;
+        line-height: 1;
+        opacity: 0.9;
+        cursor: pointer;
+        transition: color 0.25s ease, opacity 0.25s ease;
+    }
+
+        .nav-outside .nav-arrow.prev {
+            left: -25px; /* αν κόβεται, δοκίμασε left: 5px */
+        }
+
+        .nav-outside .nav-arrow.next {
+            right: -25px; /* αν κόβεται, δοκίμασε right: 5px */
+        }
+
+        .nav-outside .nav-arrow:hover {
+            color: #0a58ca;
+            opacity: 1;
+        }
+.nav-outside {
+    overflow: visible !important;
+}
+
+#articlesSwiper,
+#eventsSwiper {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+/* === SWIPER ARROWS FIX – FINAL === */
+.nav-outside {
+    position: relative;
+    overflow: visible !important;
+}
+
+    .nav-outside .swiper {
+        position: relative;
+        overflow: visible !important;
+        padding: 0 60px; /* αφήνει χώρο για arrows */
+    }
+
+/* Slides per device */
+@media (min-width: 992px) {
+    #articlesSwiper .swiper-slide {
+        flex: 0 0 33.3333% !important;
+    }
+
+    #eventsSwiper .swiper-slide {
+        flex: 0 0 50% !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .swiper-slide {
+        flex: 0 0 100% !important;
+    }
+}
+
+/* Arrows */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #0d6efd;
+    font-size: 28px;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 50 !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    opacity: 0.9;
+    pointer-events: auto;
+}
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        color: #0a58ca;
+        opacity: 1;
+    }
+
+/* Position outside */
+.swiper-button-prev {
+    left: 2px;
+}
+
+.swiper-button-next {
+    right: 2px;
+}
+
+/* Mobile – bring inside a bit */
+@media (max-width: 767.98px) {
+    .swiper-button-prev {
+        left: 10px;
+    }
+
+    .swiper-button-next {
+        right: 10px;
+    }
+}
+
+/* Pagination */
+.swiper-pagination {
+    position: static !important;
+    margin-top: 1rem;
+    text-align: center;
+}
+/* === LOGO FONT === */
+.navbar-brand h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.35rem;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    color: #0d1b2a; /* σκούρο μπλε για κομψότητα */
+    text-transform: none;
+    margin: 0;
+}
+
+.navbar-brand img {
+    height: 70px;
+    margin-right: 10px;
+}
+.site-logo {
+    height: 80px;
+    background: transparent;
+    border-radius: 0;
+}
+.site-logo {
+    height: 80px;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
+}
+/* ==== FIX: navbar toggler not clickable after open ==== */
+.navbar,
+.navbar * {
+    z-index: 9999 !important;
+}
+
+.navbar-collapse {
+    position: relative;
+    z-index: 9998 !important;
+}
+
+/* Ειδικά για να μη “σκεπάζεται” από swiper containers */
+.swiper {
+    overflow: visible !important;
+}
+.navbar {
+    position: relative;
+    z-index: 1055 !important; /* πάνω από όλα τα swipers */
+}
+.navbar-collapse.show {
+    pointer-events: none;
+}
+
+    .navbar-collapse.show .nav-link,
+    .navbar-toggler {
+        pointer-events: auto;
+    }
+.navbar-dark .navbar-nav .nav-link.active {
+    border-bottom: 3px solid #f59e0b !important; /* ένα θερμό χρώμα */
+    color: #fff !important;
+    font-weight: 600;
+    padding-bottom: 6px;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.sticky-top.navbar-dark .navbar-nav .nav-link {
+    padding: 20px 0 !important;
+}
+.navbar-dark .navbar-brand h1 {
+    color: #000 !important;
+    font-weight: 600 !important;
+    font-size: 1.4rem; /* ή 1.2rem για πιο compact εμφάνιση */
+}
+/* Τίτλος brand: μικρότερα & λεπτά γράμματα, 3 σειρές */
+.navbar .brand-title {
+    display: block;
+    color: #000; /* μαύρο όπως ζήτησες */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500; /* λεπτό (δοκίμασε 400 αν θες ακόμη πιο λεπτό) */
+    line-height: 1.1; /* κοντινές γραμμές */
+    font-size: 1.05rem; /* μικρότερο μέγεθος */
+    max-width: 14ch; /* κρατάει το πλάτος στενό ώστε να «κάθεται» σε 3 σειρές */
+    white-space: normal; /* επιτρέπει wrap (τα <br> εγγυώνται 3 σειρές) */
+    letter-spacing: 0.2px; /* προαιρετικά, λίγο «αέρα» */
+}
+
+/* Responsive tweaks */
+@media (min-width: 992px) {
+    .navbar .brand-title {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .navbar .brand-title {
+        font-size: 0.98rem;
+    }
+}
+
+/* Αν κρατήσεις h1 αντί για span, χρειάζεται override για το πολύ bold: */
+/*
+.navbar-dark .navbar-brand h1 {
+  color:#000 !important;
+  font-weight:500 !important;
+  line-height:1.1;
+  font-size:1.05rem;
+}
+*/
+/* Brand title – μικρό, λεπτό, σε 3 σειρές */
+.navbar .brand-title {
+    display: block;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* πιο λεπτό από 500 */
+    font-size: 0.9rem; /* πιο μικρό από πριν */
+    line-height: 1.05; /* πιο κοντά μεταξύ τους */
+    letter-spacing: 0.3px; /* λίγο “αέρας” ανάμεσα στα γράμματα */
+    max-width: 11ch; /* πιο στενό για να “κάθεται” ωραία σε 3 σειρές */
+    white-space: normal;
+}
+
+/* Λίγο διαφορετικό μέγεθος για desktop */
+@media (min-width: 992px) {
+    .navbar .brand-title {
+        font-size: 1rem;
+    }
+}
+
+/* Λίγο μικρότερο για κινητά */
+@media (max-width: 575.98px) {
+    .navbar .brand-title {
+        font-size: 0.85rem;
+        line-height: 1;
+    }
+}
+input.input-validation-error,
+textarea.input-validation-error {
+    border: 2px solid #dc3545 !important;
+    background-color: #ffeaea !important;
+}
+
+input.valid,
+textarea.valid {
+    border: 2px solid #198754 !important;
+}
+/* --- Brand styling --- */
+.navbar-brand {
+    text-decoration: none;
+}
+
+.brand-title {
+    font-family: 'Poppins', 'Montserrat', 'Segoe UI', Roboto, sans-serif;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+    font-size: 1rem; /* base για mobile */
+    text-transform: uppercase;
+    white-space: nowrap; /* αποτρέπει σπασίματα όταν μικραίνει */
+}
+
+/* λογότυπο */
+.site-logo {
+    height: 48px;
+    width: auto;
+}
+
+/* Μεσαία οθόνη (tablet, >=768px) */
+@media (min-width: 768px) {
+    .brand-title {
+        font-size: 1.15rem;
+    }
+
+    .site-logo {
+        height: 56px;
+    }
+}
+
+/* Desktop (>=992px) */
+@media (min-width: 992px) {
+    .brand-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: 0.7px;
+    }
+
+    .site-logo {
+        height: 60px;
+    }
+}
+/* --- Brand styling --- */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    line-height: 1;
+}
+
+.site-logo {
+    height: 40px;
+    width: auto;
+}
+
+.brand-title {
+    font-family: 'Poppins', 'Montserrat', 'Segoe UI', Roboto, sans-serif;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1.05;
+    letter-spacing: 0.4px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-left: 0.5rem;
+    display: inline-block;
+}
+
+/* 🟢 Στο mobile κάνε πιο “μαζεμένο” το brand */
+@media (max-width: 767.98px) {
+    .navbar-brand {
+        align-items: flex-start; /* τοποθετεί λογότυπο και κείμενο στην κορυφή */
+    }
+
+    .site-logo {
+        height: 36px;
+    }
+
+    .brand-title {
+        font-size: 0.8rem;
+        line-height: 1.05;
+    }
+}
+
+/* 🟢 Tablet / Desktop */
+@media (min-width: 768px) {
+    .navbar-brand {
+        align-items: center;
+    }
+
+    .site-logo {
+        height: 48px;
+    }
+
+    .brand-title {
+        font-size: 1rem;
+        font-weight: 700;
+    }
+}
+body {
+    padding-top: 0px; /* ή ό,τι ύψος έχει η δική σου navbar */
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Να μην υπάρχει ΚΑΘΟΛΟΥ κενό πάνω από το navbar */
+.navbar.fixed-top {
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    z-index: 1050;
+}
+
+/* Ρύθμιση του υπόλοιπου περιεχομένου ώστε να μην κρύβεται κάτω από τη μπάρα */
+main, .page-content, .container:first-of-type {
+    padding-top: 80px; /* ανάλογα με το πραγματικό ύψος της navbar */
+}
+
+/* Brand styling */
+.brand-title {
+    font-family: 'Poppins', 'Montserrat', 'Segoe UI', Roboto, sans-serif;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+}
+
+.site-logo {
+    height: 44px;
+    width: auto;
+}
+
+@media (min-width: 768px) {
+    .brand-title {
+        font-size: 1.1rem;
+    }
+
+    .site-logo {
+        height: 56px;
+    }
+}
+#page-loader {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#page-loader.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+#page-loader {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+    #page-loader.show {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+.loader-logo {
+    width: 120px; /* ✅ μέγεθος logo */
+    height: auto;
+    animation: pulse 1.2s infinite ease-in-out;
+}
+
+/* 🔄 Animation: λογότυπο που κάνει “αναπνοή” */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(0.95);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+
+/* === Loader container === */
+#page-loader {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+    /* Όταν εμφανίζεται */
+    #page-loader.show {
+        opacity: 1;
+        pointer-events: all;
+        transform: scale(1);
+    }
+
+    /* Όταν φεύγει */
+    #page-loader.hide {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+
+/* === Logo animation === */
+.loader-logo {
+    width: 120px;
+    height: auto;
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(0.95);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+/* Overlay πάνω από ΟΛΑ */
+#page-loader {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.97);
+    z-index: 999999; /* πιο ψηλά από navbar/modals */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .8s ease;
+}
+
+    /* όταν πρέπει να φαίνεται */
+    #page-loader.show {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* γρήγορο κρύψιμο μετά το animation */
+    #page-loader.hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+/* λογότυπο + γρήγορο zoom-in/fade */
+.loader-logo {
+    width: 130px;
+    height: auto;
+    animation: loaderZoom 1.3s ease forwards;
+}
+
+@keyframes loaderZoom {
+    0% {
+        transform: scale(.8);
+        opacity: 0;
+    }
+
+    40% {
+        transform: scale(1.0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.25);
+        opacity: 0;
+    }
+}
+footer, .footer-section {
+    background-color: #4672B5 !important;
+    color: #fff;
+}
+
+    footer h4 {
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    footer ul li i {
+        color: rgba(255,255,255,0.8);
+    }
+
+    footer a {
+        color: #fff;
+        transition: opacity 0.2s ease;
+    }
+
+        footer a:hover {
+            opacity: 0.8;
+            text-decoration: none;
+        }
+
+.btn-outline-light {
+    border-color: rgba(255,255,255,0.7);
+}
+
+    .btn-outline-light:hover {
+        background-color: #fff;
+        color: #4672B5;
+    }
+footer h4 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+footer a {
+    color: #fff;
+    transition: all 0.2s ease;
+}
+
+    footer a:hover {
+        opacity: 0.85;
+        text-decoration: underline;
+    }
+
+footer ul li {
+    line-height: 1.7;
+}
+
+.btn-outline-light {
+    border-color: rgba(255,255,255,0.7);
+    color: #fff;
+}
+
+    .btn-outline-light:hover {
+        background-color: #fff;
+        color: #4672B5;
+    }
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+    .navbar-brand:hover {
+        opacity: 0.85;
+    }
+
+.brand-logo {
+    width: 52px; /* καθαρό, ισορροπημένο μέγεθος */
+    height: auto;
+    border-radius: 50%; /* αν το λογότυπο είναι κυκλικό */
+    object-fit: contain;
+}
+
+.brand-text {
+    color: #0d1b2a; /* ή #fff αν έχεις dark navbar */
+    text-align: left;
+    line-height: 1.2;
+}
+
+.navbar-dark .brand-text {
+    color: #000;
+}
+.navbar-brand::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #0d6efd, #ffffff, #e63946);
+    margin-top: 4px;
+    border-radius: 2px;
+}
+/* Logo styling */
+.brand-logo {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Text container */
+.brand-text {
+    text-align: left;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+}
+
+/* Πρώτη γραμμή — πιο bold */
+.brand-line-1 {
+    color: #0d2b4f; /* σκούρο μπλε - επαγγελματικό */
+    font-size: 0.9rem;
+}
+
+/* Δεύτερη γραμμή — πιο light */
+.brand-line-2 {
+    color: #4672B5; /* corporate μπλε σου */
+    font-size: 0.85rem;
+}
+
+/* Hover effect */
+.navbar-brand:hover {
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
+}
+/* 🌟 Smooth mobile navbar open/close */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        transition: all 0.35s ease;
+        transform-origin: top;
+    }
+
+        .navbar-collapse.collapsing {
+            opacity: 0;
+            transform: scaleY(0.95);
+        }
+
+        .navbar-collapse.show {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+}
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        transition: all 0.35s ease;
+        transform-origin: top;
+    }
+
+        .navbar-collapse.collapsing {
+            opacity: 0;
+            transform: scaleY(0.95);
+        }
+
+        .navbar-collapse.show {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+}
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        transition: all 0.35s ease;
+        transform-origin: top;
+    }
+
+        .navbar-collapse.collapsing {
+            opacity: 0;
+            transform: scaleY(0.95);
+        }
+
+        .navbar-collapse.show {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+}
+/* === News Cards Aesthetic === */
+.news-card-container {
+    background: #fff;
+    border-radius: 1.2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: all 0.35s ease;
+    overflow: hidden;
+}
+
+    .news-card-container:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+
+/* Εικόνα με overlay */
+.news-img {
+    height: 220px;
+    position: relative;
+}
+
+.news-img-zoom {
+    transition: transform .5s ease;
+}
+
+.news-card-container:hover .news-img-zoom {
+    transform: scale(1.08);
+}
+
+.news-date-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 30px;
+}
+
+.news-category {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: linear-gradient(90deg, #007bff 0%, #00b4d8 100%);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-weight: 500;
+    box-shadow: 0 3px 8px rgba(0,123,255,0.3);
+}
+
+/* Κουμπί “Read More” */
+.btn-news-read {
+    background: linear-gradient(90deg, #007bff 0%, #00b4d8 100%);
+    color: #fff !important;
+    border: none;
+    border-radius: 50px;
+    padding: 6px 18px;
+    font-weight: 500;
+    transition: all .3s ease;
+}
+
+    .btn-news-read:hover {
+        box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        transform: translateY(-1px);
+    }
+
+/* Σταθερό ύψος περιγραφής */
+.news-content p {
+    min-height: 80px;
+}
+
+/* Για πιο καθαρό grid spacing */
+.news-card {
+    margin-bottom: 30px;
+}
+.news-card-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.news-card {
+    display: flex;
+    align-items: stretch;
+}
+
+.news-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+/* Κρατάει όλες τις κάρτες ίδιου ύψους */
+.news-card-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+    .news-card-container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+
+.news-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.news-img {
+    height: 220px;
+    overflow: hidden;
+}
+
+.news-img-zoom {
+    transition: transform .5s ease;
+}
+
+.news-card-container:hover .news-img-zoom {
+    transform: scale(1.08);
+}
+
+.news-date-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 30px;
+}
+
+.news-category {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: linear-gradient(90deg, #007bff 0%, #00b4d8 100%);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-weight: 500;
+    box-shadow: 0 3px 8px rgba(0,123,255,0.3);
+}
+
+.btn-news-read {
+    background: linear-gradient(90deg, #007bff 0%, #00b4d8 100%);
+    color: #fff !important;
+    border: none;
+    border-radius: 50px;
+    padding: 6px 18px;
+    font-weight: 500;
+    transition: all .3s ease;
+}
+
+    .btn-news-read:hover {
+        box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        transform: translateY(-1px);
+    }
+/* === Ενιαίο ύψος για όλες τις κάρτες === */
+#newsList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    #newsList > .col-lg-4 {
+        display: flex;
+    }
+
+.news-card-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+    .news-card-container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+/* === Εικόνα === */
+.news-img {
+    height: 230px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+    .news-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+.news-card-container:hover .news-img img {
+    transform: scale(1.05);
+}
+
+/* === Περιεχόμενο === */
+.news-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 1.5rem;
+}
+
+    .news-content h5 {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .news-content p {
+        flex-grow: 1;
+        color: #6c757d;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+
+    .news-content .mt-auto {
+        margin-top: auto;
+    }
+
+/* === Overlay ημερομηνίας και κατηγορίας === */
+.news-date-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.news-category {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: linear-gradient(90deg, #007bff 0%, #00b4d8 100%);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+/* === Κουμπί === */
+.btn-news-read {
+    background: linear-gradient(90deg, #007bff 0%, #00b4d8 100%);
+    color: #fff !important;
+    border: none;
+    border-radius: 50px;
+    padding: 6px 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+    .btn-news-read:hover {
+        box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        transform: translateY(-2px);
+    }
+
+/* === News card uniform height fix === */
+#newsList {
+    align-items: stretch !important;
+}
+
+    #newsList .col-lg-4 {
+        display: flex !important;
+    }
+
+    #newsList .news-card-container {
+        display: flex !important;
+        flex-direction: column;
+        flex-grow: 1;
+        height: 100%;
+    }
+#newsList {
+    transition: all 0.3s ease-in-out;
+}
+
+.news-card-container {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+/* === FIX: Σταθερό ύψος εικόνας === */
+.news-img {
+    height: 220px !important; /* ή 230px αν προτιμάς */
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+    .news-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+/* === FIX: σταθερό ύψος περιγραφής === */
+.news-content p {
+    height: 80px; /* ή 100px αν θες πιο πολύ κείμενο */
+    overflow: hidden;
+}
+#newsList > .col-lg-4 {
+    display: flex;
+}
+/* === FINAL FIX FOR NEWS CARD HEIGHT === */
+#newsList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+    #newsList > .col-lg-4 {
+        display: flex;
+        align-items: stretch;
+    }
+
+.news-card-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.news-img {
+    height: 220px !important;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+    .news-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.news-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+}
+
+    .news-content p {
+        height: 80px;
+        overflow: hidden;
+    }
+
+.news-card-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+/* === UNIFORM CARD HEIGHT FIX === */
+#newsList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+    #newsList > .col-lg-4 {
+        display: flex;
+        align-items: stretch;
+    }
+
+.news-card-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+    border-radius: 1rem;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+    .news-card-container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+
+.news-img {
+    height: 220px !important;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+    .news-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.news-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+    .news-content p {
+        height: 80px;
+        overflow: hidden;
+    }
+.news-card-container {
+    height: 500px !important;
+}
+.news-card-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.news-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between; /* 👈 το μαγικό */
+}
+
+    .news-content p {
+        flex-grow: 1;
+        height: 80px; /* ή ό,τι σε βολεύει */
+        overflow: hidden;
+    }
+
+    .news-content .btn-news-read {
+        align-self: flex-start;
+        margin-top: auto; /* σπρώχνει προς τα κάτω */
+    }
+#newsList > .col-lg-4 {
+    display: flex;
+}
+
+.news-card-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.news-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+    .news-content p {
+        flex-grow: 1;
+        min-height: 80px;
+        overflow: hidden;
+    }
+.news-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+    .news-content p {
+        flex-grow: 1;
+        min-height: 80px;
+        overflow: hidden;
+    }
+/* ==== HARDENED CARD LAYOUT (desktop & mobile) ==== */
+
+/* 1) Σταθερός χώρος εικόνας ΧΩΡΙΣ reflow ακόμη κι αν αργήσει να φορτώσει */
+.news-img {
+    aspect-ratio: 16 / 9; /* κρατάει θέση πριν φορτώσει η εικόνα */
+    height: auto !important; /* προτιμάμε aspect-ratio αντί για fixed px */
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+    .news-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block; /* αποφυγή inline gaps */
+    }
+
+/* 2) Σταθερό content frame + Read More στο κάτω μέρος */
+.news-card-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.news-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 190px; /* «κουτί» περιεχομένου */
+}
+
+    .news-content .mt-auto {
+        margin-top: auto;
+    }
+
+    /* 3) Ομοιόμορφο ύψος τίτλου/κειμένου (clamp) ώστε να μην “πετάνε” */
+    .news-content h5 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 2.6em; /* κρατά σταθερό χώρο τίτλου */
+    }
+
+    .news-content p {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 4.8em; /* ~4 γραμμές */
+    }
+
+/* 4) Ίδιο ύψος στη σειρά (Bootstrap row) */
+#newsList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+    #newsList > .col-lg-4 {
+        display: flex;
+        align-items: stretch;
+    }
+
+/* 5) Σε desktop κλειδώνουμε συνολικό ύψος κάρτας για απόλυτη σταθερότητα */
+@media (min-width: 992px) {
+    .news-card-container {
+        min-height: 480px;
+    }
+    /* αν θες +/- 20px, άλλαξέ το */
+}
+
+/* ==== NEWS CARD STABILITY FIX ==== */
+.news-img {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+    .news-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+.news-card-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.news-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+    .news-content h5 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 2.4em;
+    }
+
+    .news-content p {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 4.8em;
+    }
+
+#newsList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+    #newsList > .col-lg-4 {
+        display: flex;
+        align-items: stretch;
+    }
+
+@media (min-width: 992px) {
+    .news-card-container {
+        min-height: 480px;
+    }
+}
+/* === ΕΝΙΑΙΟ LAYOUT ΓΙΑ NEWS CARDS === */
+
+/* Εικόνα - πάντα ίδια αναλογία */
+.news-img {
+    aspect-ratio: 16 / 9;
+    height: auto !important;
+    overflow: hidden;
+    background: #f3f3f3; /* αν δεν υπάρχει εικόνα */
+}
+
+    .news-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+/* Κάρτα */
+.news-card-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+    border-radius: 1rem;
+}
+
+/* Περιεχόμενο */
+.news-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 1.5rem;
+}
+
+    /* Τίτλος με σταθερό ύψος */
+    .news-content h5 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 2.6em;
+    }
+
+    /* Κείμενο με σταθερό ύψος */
+    .news-content p {
+        flex-grow: 1;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 5em; /* ίσο ύψος πάντα */
+    }
+
+    /* Footer / κουμπιά */
+    .news-content .mt-auto {
+        margin-top: auto;
+    }
+
+/* Ομοιόμορφα ύψη σε σειρά */
+#newsList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+    #newsList > .col-lg-4 {
+        display: flex;
+        align-items: stretch;
+    }
+
+/* Προαιρετικά: Ίδιο ύψος κάρτας στο desktop */
+@media (min-width: 992px) {
+    .news-card-container {
+        min-height: 480px;
+    }
+}
+.custom-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 100%;
+}
+
+    .custom-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .custom-card .blog-img img {
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+    .custom-card:hover .blog-img img {
+        transform: scale(1.05);
+    }
+
+    /* --- Σταθερό ύψος στα επιμέρους στοιχεία --- */
+    .custom-card h5 {
+        min-height: 48px; /* 2 γραμμές τίτλου */
+        font-weight: 600;
+        line-height: 1.2;
+        overflow: hidden;
+    }
+
+    .custom-card p {
+        flex-grow: 1;
+        min-height: 80px; /* ίδιο ύψος περιγραφής */
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .custom-card .mt-auto {
+        margin-top: auto;
+    }
+
+/* --- Ομοιόμορφα ύψη για τις κάρτες --- */
+.news-card {
+    display: flex;
+}
+
+    .news-card .custom-card {
+        height: 100%;
+        width: 100%;
+    }
+
+/* Κουμπιά */
+.custom-card a.btn {
+    white-space: nowrap;
+}
+
+/* Smooth αλλαγή στο filter loading */
+#newsList {
+    transition: opacity 0.3s ease;
+}
+
+    #newsList.loading {
+        opacity: 0.5;
+    }
+/* === Γενικό layout === */
+.news-card {
+    display: flex;
+}
+
+.custom-card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+    .custom-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+/* === Εικόνα === */
+.blog-img {
+    position: relative;
+    height: 220px !important;
+}
+
+    .blog-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+    }
+
+.custom-card:hover .blog-img img {
+    transform: scale(1.08);
+}
+
+/* === Overlay πάνω στην εικόνα (προαιρετικό εφέ φωτός) === */
+.blog-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.45), rgba(0,0,0,0));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.custom-card:hover .blog-img::after {
+    opacity: 1;
+}
+
+/* === Κείμενο κάρτας === */
+.custom-card .p-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.custom-card h5 {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #212529;
+    min-height: 48px; /* σταθερό ύψος τίτλου */
+    margin-bottom: 0.5rem;
+}
+
+.custom-card p {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    min-height: 80px; /* σταθερό ύψος περιγραφής */
+    margin-bottom: 0.75rem;
+}
+
+/* === Επάνω πληροφορίες (ημερομηνία & κατηγορία) === */
+.custom-card small {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.custom-card .badge {
+    background-color: #e9ecef;
+    color: #495057;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    padding: 0.3em 0.6em;
+}
+
+/* === Κουμπιά === */
+.custom-card a.btn {
+    font-weight: 500;
+    border-radius: 50px;
+    padding: 5px 16px;
+    transition: all 0.25s ease;
+}
+
+.custom-card a.btn-outline-primary {
+    color: #0062ff;
+    border-color: #0062ff;
+}
+
+    .custom-card a.btn-outline-primary:hover {
+        background: linear-gradient(90deg, #0062ff 0%, #00b4d8 100%);
+        color: #fff !important;
+        border-color: transparent;
+        box-shadow: 0 4px 15px rgba(0,98,255,0.4);
+    }
+
+/* === Admin κουμπιά === */
+.custom-card a.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.custom-card a.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* === Responsive === */
+@media (max-width: 991.98px) {
+    .blog-img {
+        height: 200px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .custom-card {
+        border-radius: 0.75rem;
+    }
+
+        .custom-card h5 {
+            font-size: 1rem;
+        }
+}

@@ -1,92 +1,174 @@
 ﻿@page
 @model HACT.Pages.IndexModel
-
 @{
     ViewData["Title"] = "Home page";
 }
 
 @await Html.PartialAsync("__Quote")
 
-<!-- Πρόσφατα Άρθρα -->
-<section class="container mt-5">
-    <div class="text-center mb-4">
-        <h5 class="fw-bold text-primary text-uppercase">Latest Articles</h5>
-    </div>
+<!-- ========= Latest Articles ========= -->
+<section class="my-5 nav-outside">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h5 class="fw-bold text-primary text-uppercase tracking-wider">Latest Articles</h5>
+        </div>
 
-    <div class="row g-4">
-        @foreach (var article in Model.LatestArticles)
-        {
-            <div class="col-lg-4 d-flex align-items-stretch">
-                <div class="blog-item rounded overflow-hidden d-flex flex-column w-100 shadow-sm custom-card">
-                    <div class="blog-img position-relative overflow-hidden" style="height: 200px;">
-                        <img class="img-fluid w-100 h-100 object-fit-cover" src="@article.ImageUrl" alt="@article.Title">
-                    </div>
-                    <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-                        <div>
-                            <div class="d-flex mb-3">
-                                <small><i class="far fa-calendar-alt text-primary me-2"></i>@article.DatePosted.ToString("dd MMM, yyyy")</small>
+        <div class="swiper" id="articlesSwiper">
+            <div class="swiper-wrapper">
+                @foreach (var article in Model.LatestArticles)
+                {
+                    <div class="swiper-slide">
+                        <div class="rounded-4 overflow-hidden h-100 shadow-sm" style="background:#f0f2f5;">
+                            <div class="position-relative overflow-hidden">
+                                <img src="@article.ImageUrl"
+                                     alt="@article.Title"
+                                     class="card-img-top card-img-zoom" />
+                                <div class="card-gradient-overlay"></div>
+                                <div class="card-overlay-text">
+                                    <span class="small">
+                                        <i class="bi bi-calendar3"></i>
+                                        @article.DatePosted.ToString("MMM dd, yyyy", System.Globalization.CultureInfo.InvariantCulture)
+                                    </span>
+                                </div>
                             </div>
-                            <h5 class="mb-2 text-truncate">@article.Title</h5>
-                            <p style="min-height: 80px;">
-                                @(article.Content.Length > 100 ? article.Content.Substring(0, 100) + "..." : article.Content)
-                            </p>
-                        </div>
-                        <div class="mt-auto pt-2">
-                            <a class="btn btn-sm btn-outline-primary me-2" asp-page="/NewsDetail" asp-route-id="@article.Id">
-                                🔍 Read More
-                            </a>
+                            <div class="p-4 d-flex flex-column">
+                                <h5 class="fw-bold mb-2" style="color:#0b2343;">@article.Title</h5>
+                                <p class="flex-grow-1" style="color:#334155;">
+                                    @(article.Content.Length > 100 ? article.Content.Substring(0, 100) + "..." : article.Content)
+                                </p>
+                                <a asp-page="/NewsDetail"
+                                   asp-route-id="@article.Id"
+                                   class="btn btn-outline-primary btn-sm mt-2 align-self-start rounded-pill px-4">
+                                    🔍 Read More
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                }
             </div>
-        }
-    </div>
 
-    <!-- Κουμπί See All -->
-@*     <div class="text-center mt-4">
-        <a class="btn btn-primary" asp-page="/News" asp-route-category="Articles">See All Articles</a>
-    </div> *@
+            <div class="swiper-pagination mt-3"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
 </section>
 
 
-<!-- Πρόσφατα Events -->
-<section class="container mt-5">
-    <div class="text-center mb-4">
-        <h5 class="fw-bold text-primary text-uppercase">Latest Events</h5>
-    </div>
+<!-- ========= Latest Events ========= -->
+<section class="my-5 nav-outside">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h5 class="fw-bold text-primary text-uppercase tracking-wider">Latest Events</h5>
+        </div>
 
-    <div class="row g-4 justify-content-center">
-        @foreach (var ev in Model.LatestEvents)
-        {
-            <div class="col-lg-4 d-flex align-items-stretch">
-                <div class="blog-item rounded overflow-hidden d-flex flex-column w-100 shadow-sm custom-card">
-                    <div class="blog-img position-relative overflow-hidden" style="height: 200px;">
-                        <img class="img-fluid w-100 h-100 object-fit-cover" src="@ev.ImageUrl" alt="@ev.Title">
-                    </div>
-                    <div class="p-4 d-flex flex-column justify-content-between flex-grow-1">
-                        <div>
-                            <div class="d-flex mb-3">
-                                <small><i class="far fa-calendar-alt text-primary me-2"></i>@ev.DatePosted.ToString("dd MMM, yyyy")</small>
+        <div class="swiper" id="eventsSwiper">
+            <div class="swiper-wrapper">
+                @foreach (var ev in Model.LatestEvents)
+                {
+                    <div class="swiper-slide">
+                        <div class="rounded-4 overflow-hidden h-100 shadow-sm" style="background:#f0f2f5;">
+                            <div class="position-relative overflow-hidden">
+                                <img src="@ev.ImageUrl"
+                                     alt="@ev.Title"
+                                     class="card-img-top card-img-zoom" />
+                                <div class="card-gradient-overlay"></div>
+                                <div class="card-overlay-text">
+                                    <span class="small">
+                                        <i class="bi bi-calendar3"></i>
+                                        @ev.DatePosted.ToString("MMM dd, yyyy", System.Globalization.CultureInfo.InvariantCulture)
+                                    </span>
+                                </div>
                             </div>
-                            <h5 class="mb-2 text-truncate">@ev.Title</h5>
-                            <p style="min-height: 80px;">
-                                @(ev.Content.Length > 100 ? ev.Content.Substring(0, 100) + "..." : ev.Content)
-                            </p>
-                        </div>
-                        <div class="mt-auto pt-2">
-                            <a class="btn btn-sm btn-outline-primary me-2" asp-page="/NewsDetail" asp-route-id="@ev.Id">
-                                🔍 Read More
-                            </a>
+                            <div class="p-4 d-flex flex-column">
+                                <h5 class="fw-bold mb-2" style="color:#0b2343;">@ev.Title</h5>
+                                <p class="flex-grow-1" style="color:#334155;">
+                                    @(ev.Content.Length > 100 ? ev.Content.Substring(0, 100) + "..." : ev.Content)
+                                </p>
+                                <a asp-page="/NewsDetail"
+                                   asp-route-id="@ev.Id"
+                                   class="btn btn-outline-primary btn-sm mt-2 align-self-start rounded-pill px-4">
+                                    🔍 Read More
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                }
             </div>
-        }
+
+            <div class="swiper-pagination mt-3"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
     </div>
-
-
-    <!-- Κουμπί See All -->
-@*     <div class="text-center mt-4">
-        <a class="btn btn-primary" asp-page="/News" asp-route-category="Events">See All Events</a>
-    </div> *@
 </section>
+
+<style>
+    /* --- Swiper Layout --- */
+    .swiper {
+        width: 100%;
+        padding-bottom: 40px;
+        overflow: visible;
+    }
+
+    .swiper-slide {
+        width: 320px !important;
+    }
+
+    /* --- Card styling --- */
+    .card-img-zoom {
+        height: 230px;
+        width: 100%;
+        object-fit: cover;
+        transition: transform .6s ease;
+    }
+
+    .rounded-4:hover .card-img-zoom {
+        transform: scale(1.05);
+    }
+
+    .card-gradient-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        background: linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+    }
+
+    .card-overlay-text {
+        position: absolute;
+        bottom: 10px;
+        left: 14px;
+        color: #fff;
+        font-size: 0.85rem;
+        z-index: 2;
+    }
+
+    /* --- Button --- */
+    .btn-outline-primary {
+        border: 1px solid #0b2343 !important;
+        color: #0b2343 !important;
+        transition: all .3s ease;
+        font-weight: 500;
+    }
+
+        .btn-outline-primary:hover {
+            background-color: #0b2343 !important;
+            color: #fff !important;
+        }
+
+    /* --- Swiper arrows & pagination --- */
+    .swiper-button-prev, .swiper-button-next {
+        color: #0b2343;
+        opacity: 0.8;
+    }
+
+        .swiper-button-prev:hover, .swiper-button-next:hover {
+            opacity: 1;
+        }
+
+    .swiper-pagination-bullet-active {
+        background: #0b2343;
+    }
+</style>

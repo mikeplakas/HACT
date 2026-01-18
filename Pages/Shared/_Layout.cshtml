@@ -1,13 +1,100 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>@ViewData["Title"] - HACT</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ✅ Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          crossorigin="anonymous">
+
+    <!-- ✅ Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+
+    <!-- ✅ Animations & Swiper -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- ✅ Custom CSS -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <!-- 🌟 Loader styles -->
+    <style>
+        #page-loader {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,.97);
+            z-index: 999999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity .8s ease;
+        }
+
+            #page-loader.show {
+                opacity: 1;
+                pointer-events: all;
+            }
+
+            #page-loader.hide {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+        .loader-logo {
+            width: 130px;
+            height: auto;
+            animation: loaderZoom 1.3s ease forwards;
+        }
+
+        @@keyframes loaderZoom {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            20% {
+                transform: scale(1.0);
+                opacity: 1;
+            }
+
+            80% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.25);
+                opacity: 0;
+            }
+        }
+
+        /* Smooth navbar animation on mobile */
+        @@media (max-width: 991.98px) {
+            .navbar-collapse
+
+        {
+            transition: all 0.35s ease;
+            transform-origin: top;
+        }
+
+        .navbar-collapse.collapsing {
+            opacity: 0;
+            transform: scaleY(0.95);
+        }
+
+        .navbar-collapse.show {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+
+        }</style>
+
     @await Html.PartialAsync("__css")
     @await RenderSectionAsync("Styles", required: false)
 </head>
@@ -15,32 +102,24 @@
 <body>
     @{
         bool isAdmin = User.Identity?.IsAuthenticated == true && User.IsInRole("Admin");
-        string adminName = User.Identity?.Name ?? "";
     }
 
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner"></div>
+    <!-- 🌟 Loader -->
+    <div id="page-loader" aria-hidden="true">
+        <img src="~/logo.png" alt="Loading..." class="loader-logo" />
     </div>
-    <!-- Spinner End -->
 
-    <!-- Topbar Start -->
-    @await Html.PartialAsync("__Topbar")
-    <!-- Topbar End -->
+      @await Html.PartialAsync("__Topbar")
 
-    <!-- Navbar & Carousel Start -->
+    <!-- Navbar -->
     @await Html.PartialAsync("__Navbar")
-    <!-- Navbar & Carousel End -->
 
-    <!-- Full Screen Search Start -->
-    @await Html.PartialAsync("__FullScreenSearch")
-    <!-- Full Screen Search End -->
 
+    <!-- Main Content -->
     @RenderBody()
 
-    <!-- Footer Start -->
+    <!-- Footer -->
     @await Html.PartialAsync("__Footer")
-    <!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top">
@@ -48,43 +127,110 @@
     </a>
 
     @await Html.PartialAsync("__js")
-    @await RenderSectionAsync("Scripts", required: false)
 
-    @if (isAdmin)
-    {
-        <script src="https://unpkg.com/@@microsoft/signalr@7.0.5/dist/browser/signalr.min.js"></script>
+    <!-- ✅ Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@3.2.12/dist/jquery.validate.unobtrusive.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-        <script>
-            const connection = new signalR.HubConnectionBuilder()
-                .withUrl("/notificationHub")
-                .build();
+    <!-- ✅ Init Swipers -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function initSwiper(container, desktopCount) {
+                new Swiper(container, {
+                    loop: false,
+                    watchOverflow: true,
+                    centeredSlides: false,
+                    speed: 600,
+                    navigation: {
+                        nextEl: container + ' .swiper-button-next',
+                        prevEl: container + ' .swiper-button-prev'
+                    },
+                    pagination: {
+                        el: container + ' .swiper-pagination',
+                        clickable: true
+                    },
+                    breakpoints: {
+                        0: { slidesPerView: 1, slidesPerGroup: 1, spaceBetween: 0 },
+                        992: { slidesPerView: desktopCount, slidesPerGroup: desktopCount, spaceBetween: 24 }
+                    }
+                });
+            }
+            initSwiper('#articlesSwiper', 3);
+            initSwiper('#eventsSwiper', 2);
+        });
+    </script>
 
-            connection.on("ReceiveMessage", function (message, unreadCount) {
-                // Toast
-                const toast = document.createElement("div");
-                toast.className = "toast align-items-center text-bg-primary border-0 show position-fixed bottom-0 end-0 m-3";
-                toast.innerHTML = `
-                    <div class="d-flex">
-                        <div class="toast-body">${message}</div>
-                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
-                    </div>`;
-                document.body.appendChild(toast);
-                setTimeout(() => toast.remove(), 5000);
+    <!-- ✅ Loader Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const loader = document.getElementById('page-loader');
+            if (!loader) return;
 
-                // Badge update
-                const badge = document.querySelector("#unreadBadge");
-                if (badge) {
-                    badge.textContent = unreadCount;
-                    badge.style.display = unreadCount > 0 ? "inline-block" : "none";
-                }
+            const logo = loader.querySelector('.loader-logo');
+            const restartAnimation = () => { logo.style.animation='none'; void logo.offsetWidth; logo.style.animation=''; };
+            const showLoader = () => { restartAnimation(); loader.classList.remove('hide'); loader.classList.add('show'); };
+            const hideLoaderAfter = (ms) => {
+                setTimeout(() => {
+                    loader.classList.add('hide');
+                    setTimeout(() => loader.classList.remove('show','hide'),850);
+                }, ms);
+            };
+
+            // Δείξε loader σε κανονικά links
+            document.addEventListener('click', function(e){
+                const a = e.target.closest('a');
+                if (!a || a.target === '_blank' || a.getAttribute('href')?.startsWith('#')) return;
+                if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+                if (a.closest('.navbar-toggler')) return; // ΜΗ loader για το burger
+                showLoader();
+            }, true);
+
+            document.addEventListener('submit', showLoader, true);
+            window.addEventListener('pageshow', () => hideLoaderAfter(800));
+            showLoader(); hideLoaderAfter(800);
+        });
+    </script>
+
+    <!-- ✅ Burger toggle logic -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbarCollapse = document.getElementById("navbarCollapse");
+            const toggler = document.querySelector(".navbar-toggler");
+            if (!navbarCollapse || !toggler) return;
+
+            const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse, { toggle: false });
+
+            // 🔹 Toggle on burger click (open/close)
+            toggler.addEventListener("click", function (e) {
+                e.preventDefault();
+                bsCollapse.toggle();
             });
 
-            connection.start().catch(err => console.error("SignalR Error: ", err));
-        </script>
-    }
+            // 🔹 Close when clicking any link (in mobile)
+            document.querySelectorAll(".navbar-collapse .nav-link").forEach(link => {
+                link.addEventListener("click", () => {
+                    if (window.innerWidth < 992 && navbarCollapse.classList.contains("show")) {
+                        bsCollapse.hide();
+                    }
+                });
+            });
 
+            // 🔹 Close when clicking outside
+            document.addEventListener("click", (e) => {
+                if (window.innerWidth < 992 &&
+                    !e.target.closest(".navbar") &&
+                    navbarCollapse.classList.contains("show")) {
+                    bsCollapse.hide();
+                }
+            });
+        });
+    </script>
 
-
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
-
 </html>

@@ -2,6 +2,7 @@ using HACT.Data;
 using HACT.Hubs;
 using HACT.Services;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -47,9 +48,7 @@ builder.Services.AddSingleton(sp =>
     );
 });
 
-// ?? Δικά σου services (Contact, News κλπ)
-builder.Services.AddScoped<IContactMessageRepository, SqlContactMessageRepository>();
-builder.Services.AddScoped<IContactService, ContactService>();
+
 builder.Services.AddScoped<INewRepository, SqlNewRepository>();
 builder.Services.AddSignalR(); // ? SignalR
 
@@ -78,6 +77,10 @@ builder.Services.ConfigureApplicationCookie(options =>
     };
 });
 
+builder.Services.AddRazorPages(options =>
+{
+    options.Conventions.ConfigureFilter(new IgnoreAntiforgeryTokenAttribute());
+});
 
 var app = builder.Build();
 
@@ -100,3 +103,4 @@ app.MapRazorPages();
 app.MapHub<NotificationHub>("/notificationHub");
 
 app.Run();
+

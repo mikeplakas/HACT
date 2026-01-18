@@ -1,0 +1,158 @@
+[
+    {
+        "name": "AmCham Greece",
+        "lat": 37.9838,
+        "lng": 23.7275,
+        "website": "https://www.amcham.gr"
+    },
+    {
+        "name": "AmCham France",
+        "lat": 48.8566,
+        "lng": 2.3522,
+        "website": "https://amchamfrance.org"
+    },
+    {
+        "name": "AmCham Germany",
+        "lat": 52.5200,
+        "lng": 13.4050,
+        "website": "https://www.amcham.de"
+    },
+    {
+        "name": "AmCham Italy",
+        "lat": 45.4642,
+        "lng": 9.19,
+        "website": "https://www.amcham.it"
+    },
+    {
+        "name": "AmCham Spain",
+        "lat": 40.4168,
+        "lng": -3.7038,
+        "website": "https://www.amchamspain.com"
+    },
+    {
+        "name": "AmCham UK",
+        "lat": 51.5074,
+        "lng": -0.1278,
+        "website": "https://www.babc.org"
+    },
+    {
+        "name": "AmCham Cyprus",
+        "lat": 35.1856,
+        "lng": 33.3823,
+        "website": "https://www.amchamcyprus.com"
+    },
+    {
+        "name": "AmCham Egypt",
+        "lat": 30.0444,
+        "lng": 31.2357,
+        "website": "https://amcham.org.eg"
+    },
+    {
+        "name": "AmCham Nigeria",
+        "lat": 6.5244,
+        "lng": 3.3792,
+        "website": "https://www.amchamnigeria.com"
+    },
+    {
+        "name": "AmCham Kenya",
+        "lat": -1.2921,
+        "lng": 36.8219,
+        "website": "https://amcham.co.ke"
+    },
+    {
+        "name": "AmCham India",
+        "lat": 28.6139,
+        "lng": 77.2090,
+        "website": "https://amchamindia.com"
+    },
+    {
+        "name": "AmCham China",
+        "lat": 39.9042,
+        "lng": 116.4074,
+        "website": "https://www.amchamchina.org"
+    },
+    {
+        "name": "AmCham Japan",
+        "lat": 35.6762,
+        "lng": 139.6503,
+        "website": "https://www.accj.or.jp"
+    },
+    {
+        "name": "AmCham Australia",
+        "lat": -33.8688,
+        "lng": 151.2093,
+        "website": "https://amcham.com.au"
+    },
+    {
+        "name": "AmCham Brazil",
+        "lat": -23.5505,
+        "lng": -46.6333,
+        "website": "https://www.amcham.com.br"
+    },
+    {
+        "name": "AmCham Argentina",
+        "lat": -34.6037,
+        "lng": -58.3816,
+        "website": "https://www.amchamar.com.ar"
+    },
+    {
+        "name": "AmCham Canada",
+        "lat": 45.4215,
+        "lng": -75.6992,
+        "website": "https://www.amchamcanada.ca"
+    },
+    {
+        "name": "AmCham Mexico",
+        "lat": 19.4326,
+        "lng": -99.1332,
+        "website": "https://www.amcham.org.mx"
+    },
+    {
+        "name": "AmCham UAE",
+        "lat": 25.2048,
+        "lng": 55.2708,
+        "website": "https://www.amcham.ae"
+    },
+    {
+        "name": "AmCham Qatar",
+        "lat": 25.2854,
+        "lng": 51.5310,
+        "website": "https://www.amchamqatar.org"
+    },
+    {
+        "name": "AmCham Saudi Arabia",
+        "lat": 24.7136,
+        "lng": 46.6753,
+        "website": "https://www.amchamksa.com"
+    },
+    {
+        "name": "AmCham South Africa",
+        "lat": -26.2041,
+        "lng": 28.0473,
+        "website": "https://www.amcham.co.za"
+    },
+    {
+        "name": "AmCham Singapore",
+        "lat": 1.3521,
+        "lng": 103.8198,
+        "website": "https://amcham.com.sg"
+    },
+    {
+        "name": "AmCham Korea",
+        "lat": 37.5665,
+        "lng": 126.9780,
+        "website": "https://www.amchamkorea.org"
+    },
+    {
+        "name": "AmCham Hong Kong",
+        "lat": 22.3193,
+        "lng": 114.1694,
+        "website": "https://www.amcham.org.hk"
+    },
+    {
+        "name": "AmCham Indonesia",
+        "lat": -6.2088,
+        "lng": 106.8456,
+        "website": "https://www.amcham.or.id"
+    }
+]

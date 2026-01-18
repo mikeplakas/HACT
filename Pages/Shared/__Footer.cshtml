@@ -1,43 +1,50 @@
-﻿<div class="container-fluid bg-light footer-spacer"></div> <!-- Light blue spacer -->
+﻿<!-- 🌊 FOOTER -->
+<footer class="text-light wow fadeInUp text-center text-md-start" data-wow-delay="0.1s" style="background:#4672B5 !important;">
+    <div class="container py-5">
+        <div class="row g-5 justify-content-center">
 
-<div class="container-fluid bg-dark text-light wow fadeInUp text-center" data-wow-delay="0.1s">
-    <div class="container pt-5">
-        <!-- εναλλακτικά εδώ δίνεις pt-5 -->
-        <div class="row justify-content-center text-center">
-            <div class="col-lg-10">
-                <div class="row justify-content-center">
-                    <div class="col-md-4 mb-4">
-                        <h3 class="text-light mb-3">Get In Touch</h3>
-                        <p><i class="bi bi-geo-alt text-primary me-2"></i>16192, Coastal Highway Lewes, Delaware 19958-9776</p>
-                        <p><i class="bi bi-envelope-open text-primary me-2"></i>info@hact.info</p>
-                        <p><i class="bi bi-telephone text-primary me-2"></i>+30 2104111428</p>
-                        <p><i class="bi bi-telephone text-primary me-2"></i>+30 6940789381</p>
-
-                        <div class="d-flex justify-content-center mt-3">
-                            <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
+            <!-- ⚠️ Column: Disclaimer -->
+            <div class="col-md-4 col-sm-6">
+                <h4 class="fw-semibold mb-3 text-uppercase border-bottom pb-2 d-inline-block">Disclaimer</h4>
+                <ul class="list-unstyled small mb-0">
+                    <li class="mb-2">We do not promise government funds. H.A.C.T. is a cultural-tourism facilitation hub, not a government or commercial entity.</li>
+                    <li class="mb-2">Joining the platform does not imply any financial or contractual obligation. Participation is free, voluntary, and requires respect for the quality of the experiences provided.</li>
+                    <li>Partnerships are based on trust and transparency. H.A.C.T. does not “sell visibility” but selects partnerships that align with its vision.</li>
+                </ul>
             </div>
+
+            <!-- 🔗 Column: Quick Links -->
+            <div class="col-md-4 col-sm-6">
+                <h4 class="fw-semibold mb-3 text-uppercase border-bottom pb-2 d-inline-block">Quick Links</h4>
+                <ul class="list-unstyled small">
+                    <li class="mb-2"><a class="text-white text-decoration-none" asp-page="/About"><i class="bi bi-chevron-right me-2"></i>About Us</a></li>
+                    <li class="mb-2"><a class="text-white text-decoration-none" asp-page="/Services"><i class="bi bi-chevron-right me-2"></i>Our Services</a></li>
+                    <li class="mb-2"><a class="text-white text-decoration-none" asp-page="/News"><i class="bi bi-chevron-right me-2"></i>Latest News</a></li>
+                    <li class="mb-2"><a class="text-white text-decoration-none" asp-page="/Contact"><i class="bi bi-chevron-right me-2"></i>Contact Us</a></li>
+                    <li><a class="text-white text-decoration-none" asp-page="/Disclaimer"><i class="bi bi-chevron-right me-2"></i>Disclaimer</a></li>
+                </ul>
+            </div>
+
+            <!-- 📞 Column: Contact Info -->
+            <div class="col-md-4 col-sm-6">
+                <h4 class="fw-semibold mb-3 text-uppercase border-bottom pb-2 d-inline-block">Get In Touch</h4>
+                <ul class="list-unstyled small mb-0">
+                    <li class="mb-2"><i class="bi bi-geo-alt-fill me-2 text-white-50"></i>16192 Coastal Highway, Lewes, Delaware 19958-9776</li>
+                    <li class="mb-2"><i class="bi bi-envelope-open-fill me-2 text-white-50"></i>info@hact.info</li>
+@*                     <li class="mb-2"><i class="bi bi-telephone-fill me-2 text-white-50"></i>+30 210 4111428</li>
+ *@                    <li><i class="bi bi-phone-fill me-2 text-white-50"></i>+30 6940 789381</li>
+                </ul>
+            </div>
+
         </div>
     </div>
-</div>
 
-<div class="container-fluid text-white text-center" style="background: #061429;">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                    <p class="mb-0">
-                        &copy; <a class="text-white border-bottom" href="#">HACT</a>. All Rights Reserved.
-                        <a class="text-white border-bottom ms-2" asp-page="/Disclaimer">Disclaimer</a>
-                        | Designed by <a class="text-white border-bottom" href="https://www.linkedin.com/in/michalis-plakas-3a8170237">PM</a>
-                    </p>
-                </div>
-            </div>
+    <!-- ⚖️ Bottom Bar -->
+    <div class="container-fluid border-top border-white-50 py-3">
+        <div class="container text-center small">
+            <span>&copy; @DateTime.Now.Year <strong>HACT</strong>. All Rights Reserved.</span>
+            <span class="mx-2">|</span>
+            Designed by <a class="text-white text-decoration-underline" href="https://www.linkedin.com/in/michalis-plakas-3a8170237" target="_blank">PM</a>
         </div>
     </div>
-</div>
+</footer>

@@ -13,6 +13,6 @@ namespace HACT.Data
         }
 
         // Δικά σου tables
-        public DbSet<ContactMessage> ContactMessages { get; set; }
+        //public DbSet<ContactMessage> ContactMessages { get; set; }
     }
 }

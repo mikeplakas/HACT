@@ -36,14 +36,15 @@ namespace HACT.Pages
             LatestArticles = allNews
                 .Where(x => x.Category == "Articles")
                 .OrderByDescending(x => x.DatePosted)
-                .Take(3)
+                .Take(6)
                 .ToList();
 
             LatestEvents = allNews
                 .Where(x => x.Category == "Events")
                 .OrderByDescending(x => x.DatePosted)
-                .Take(2)
+                .Take(4)
                 .ToList();
+
         }
     }
 }

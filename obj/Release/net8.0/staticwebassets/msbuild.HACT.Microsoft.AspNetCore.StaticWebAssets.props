@@ -12,11 +12,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>xzth5gguje</Fingerprint>
-      <Integrity>42hxcjgPFqK7oU4aAeW2pPka+bxsEVmsqYnnKfiYDVU=</Integrity>
+      <Fingerprint>sa4vutethl</Fingerprint>
+      <Integrity>hLkANPCVACJbteispNDlpGXO8RGN5PtVTA7t4Uk/MoI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\data\amchams.json'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HACT</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HACT</BasePath>
+      <RelativePath>data/amchams.json</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>l0map3wzrm</Fingerprint>
+      <Integrity>9fI/8ms4GX8wgikg4470xPOT3OBbp6flSziKmpc5ND4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\data\amchams.json'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))">
       <SourceType>Package</SourceType>
@@ -102,8 +120,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>7fa324b925</Fingerprint>
-      <Integrity>gxkMNtVn5qoFU4ANImvhaEkrl/jE5hgu0O4P0r7KZFs=</Integrity>
+      <Fingerprint>wlxjyvmtvc</Fingerprint>
+      <Integrity>5A4nzr2c+dB4oBZ9gbBaI0KS0Z6/x4qSa+gqaL72fRg=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\landingpage\css\bootstrap.min.css'))</OriginalItemSpec>
@@ -120,8 +138,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>tyh86g3p77</Fingerprint>
-      <Integrity>9YKulhfIx9MvpVnf7/nIc2qOuy0E00nZ7XrOwTyWN2U=</Integrity>
+      <Fingerprint>zc8ikrczg3</Fingerprint>
+      <Integrity>01oACu89wI5Z3wRdg0NUsDHNyb4jWBC+pmGorHqEwe4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\landingpage\css\style.css'))</OriginalItemSpec>
@@ -2010,8 +2028,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>f7q4cciidz</Fingerprint>
-      <Integrity>qzkvQpm+pgNfJZ/OZFyMkxnkZbDTd04jo6TzHfHRPVs=</Integrity>
+      <Fingerprint>0c3w2akx7s</Fingerprint>
+      <Integrity>IP3wrJ0TvJeR+7E4M/0Is5GXaI0tLcc04eQMlKR0w7s=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\logo.png'))</OriginalItemSpec>
