@@ -7,6 +7,8 @@ C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\PubTmp\Out\HACT.pdb
 C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\PubTmp\Out\Azure.Core.dll
 C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\PubTmp\Out\Azure.Identity.dll
 C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\PubTmp\Out\BCrypt.Net-Next.dll
+C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\PubTmp\Out\BouncyCastle.Cryptography.dll
+C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\PubTmp\Out\MailKit.dll
 C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -39,6 +41,7 @@ C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\PubTmp\Out\Microsoft.IdentityMo
 C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\PubTmp\Out\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll
 C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\PubTmp\Out\Microsoft.SqlServer.Server.dll
+C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\PubTmp\Out\MimeKit.dll
 C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\PubTmp\Out\Newtonsoft.Json.dll
 C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\PubTmp\Out\System.ClientModel.dll
 C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\PubTmp\Out\System.Configuration.ConfigurationManager.dll

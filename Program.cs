@@ -35,6 +35,17 @@ builder.Services.AddRazorPages(options =>
            .AllowAnonymousToPage("/Admin/Login")
            .AllowAnonymousToPage("/Admin/Logout");
 });
+builder.Services.AddSingleton(sp =>
+{
+    var config = builder.Configuration.GetSection("EmailSettings");
+    return new HACT.Services.EmailSender(
+        config["SmtpHost"],
+        int.Parse(config["SmtpPort"]),
+        config["SmtpUser"],
+        config["SmtpPass"],
+        config["FromEmail"]
+    );
+});
 
 // ?? Δικά σου services (Contact, News κλπ)
 builder.Services.AddScoped<IContactMessageRepository, SqlContactMessageRepository>();

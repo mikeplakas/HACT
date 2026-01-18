@@ -344,3 +344,7 @@ C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\refint\HACT.dll
 C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\HACT.pdb
 C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\HACT.genruntimeconfig.cache
 C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\ref\HACT.dll
+C:\Users\User\Desktop\HACTnew\bin\Release\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\User\Desktop\HACTnew\bin\Release\net8.0\MailKit.dll
+C:\Users\User\Desktop\HACTnew\bin\Release\net8.0\MimeKit.dll
+C:\Users\User\Desktop\HACTnew\obj\Release\net8.0\HACT.sourcelink.json

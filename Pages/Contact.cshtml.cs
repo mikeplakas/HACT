@@ -9,55 +9,36 @@ namespace HACT.Pages
 {
     public class ContactModel : PageModel
     {
-        private readonly IContactService _contactService;
-        private readonly IHubContext<NotificationHub> _hubContext;
+        private readonly EmailSender _emailSender;
 
-        public ContactModel(IContactService contactService, IHubContext<NotificationHub> hubContext)
+        public ContactModel(EmailSender emailSender)
         {
-            _contactService = contactService;
-            _hubContext = hubContext;
+            _emailSender = emailSender;
         }
 
-        public bool Success { get; set; } = false;
+        [BindProperty]
+        public ContactMessage Message { get; set; }
+
+        public bool Success { get; set; }
 
         public void OnGet()
         {
-            this.SetupViewDataTitleFromUrl();
         }
 
-        public async Task<IActionResult> OnPost()
+        public async Task<IActionResult> OnPostAsync()
         {
-            OnGet();
-
-            var name = Request.Form["Name"].ToString();
-            var email = Request.Form["Email"].ToString();
-            var subject = Request.Form["Subject"].ToString();
-            var message = Request.Form["Message"].ToString();
-
-            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(email))
+            if (!ModelState.IsValid)
                 return Page();
 
-            var contactMessage = new ContactMessage
-            {
-                Name = name,
-                Email = email,
-                Subject = subject,
-                Message = message
-            };
+            // Εδώ βάζετε το email που θέλετε να λαμβάνει τα μηνύματα
+            var toEmail = "info@hact.info";
+            var subject = $"Contact Form: {Message.Subject}";
+            var body = $"Name: {Message.Name}\nEmail: {Message.Email}\n\n{Message.Message}";
 
-            // ? Αποθήκευση στη βάση
-            _contactService.Submit(contactMessage);
-
-            // ? Πάρε το πλήθος των unread
-            var unreadCount = _contactService.GetUnreadCount();
-
-            // ? Στείλε ειδοποίηση στους Admins
-            await _hubContext.Clients.Group("Admins")
-                .SendAsync("ReceiveMessage",
-                    $"?? Νέο μήνυμα από {contactMessage.Name} ({contactMessage.Email})",
-                    unreadCount);
+            await _emailSender.SendEmailAsync(toEmail, subject, body, Message.Email);
 
             Success = true;
+            ModelState.Clear();
             return Page();
         }
     }

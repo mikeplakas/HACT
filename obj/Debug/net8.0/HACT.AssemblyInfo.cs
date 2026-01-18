@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HACT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+324a2bfe99e2bdbe265f41609764bbb4847281ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("HACT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HACT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

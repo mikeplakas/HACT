@@ -110,4 +110,19 @@ body {
     background-color: rgb(140, 31, 31) !important; /* π.χ. μπλε */
     color: #fff !important; /* λευκά γράμματα */
 }
+.custom-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+    .custom-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+.blog-img img {
+    transition: transform 0.4s ease;
+}
+
+.blog-item:hover .blog-img img {
+    transform: scale(1.05);
+}
